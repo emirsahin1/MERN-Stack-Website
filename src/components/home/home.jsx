@@ -32,11 +32,11 @@ class Home extends React.Component {
                 <SlideShow />
                 <Divider />
                 <TextContainer mobileFontSize="14px" animationProps={this.animationProps}>
-                    <p>Blob king is the best king. We hate duckmans. Blop blop blop blop.</p>
+                    <p>Lorem Blimpsum Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                 </TextContainer>
                 <ButtonContainer animateButton={this.state.beginButtonAnimation} >
                     <ScrollMarker ref={this.marker}/>
-                    <ButtonText>Download Blop</ButtonText>
+                    <ButtonText>Download Now</ButtonText>
                 </ButtonContainer> 
                 <ImageBlock side="right" image={require("../../images/slideshow-images/slide1.jpg")}/>
                 <ImageBlock side="left" image={require("../../images/slideshow-images/slide3.jpg")}/>

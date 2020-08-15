@@ -39,14 +39,23 @@ export const BlockImage = styled.img`
 `
 export const Container = styled.div`
     display: flex;
+    width: 80%;
     align-items: center;
     flex-direction:${props => props.side === "left" ? "row" : "row-reverse"}; 
     margin-top: 50px; 
+    margin-right: auto;
+    margin-left: auto;
+
+    @media screen and (max-width: 768px){
+    width:100%;
+    }
 
     &:after {
     content: " "; 
     display: block;
     clear: both;
     }`
+
+    
 
 
