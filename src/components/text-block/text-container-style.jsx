@@ -4,6 +4,7 @@ export const TextContainer = styled.div`
 
     margin: 50px auto 10px auto;
     width:60%;
+    min-width: 200px;
     height: auto;
     background-color:#1d1d1d;
     text-align:center;
@@ -16,16 +17,6 @@ export const TextContainer = styled.div`
         font-size: 25px;
     }
 
-    ${props => {
-        console.log(props.side);
-
-        if (props.side === "left") {
-            return css`
-            margin-right: 3vw;
-            `}
-        else if (props.side === "right") return css`margin-left: 3vw;`
-    }
-    }
 
     ${props => {
         if (props.animated) {
@@ -42,20 +33,6 @@ export const TextContainer = styled.div`
     ` }
     }}
 
-    ${props => {
-        if (props.light) {
-            return css`
-            background-color:#00000082;
-            & p{
-                color: #ffffff;
-                text-shadow: 0 0 20px black;
-            }
-            `
-        }
-    }}
-
-    
-
     @media screen and (max-width: 768px){
         & p{
         font-size:${props => props.mobileFontSize ? `min(max(${props.mobileFontSize}, 5vw), 25px)` : "min(5vw, 20px)"};
@@ -63,6 +40,9 @@ export const TextContainer = styled.div`
         }
     
     border-radius: 20px;
+    width:80%;
+    margin-top: 10px;
+    margin-bottom: 10px;
     }
 `
 

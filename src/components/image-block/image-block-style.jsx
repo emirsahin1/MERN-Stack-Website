@@ -5,8 +5,8 @@ export const ImageContainer = styled.div`
     float:right;
     width: 40vw;
     height: 40vw;
-    /* min-width: 200px; */
-    /* min-height: 200px; */
+    min-width: 330px;
+    min-height: 330px;
     max-height: 500px;
     max-width: 500px;
     right:0px;
@@ -26,7 +26,13 @@ export const ImageContainer = styled.div`
         opacity: 100;
         `
         }
-    }
+    }}
+
+    @media screen and (max-width: 768px){
+        width: 80vw;
+        height: 80vw;
+        min-width: 0;
+        min-height: 0;
     }
 `
 
@@ -42,12 +48,16 @@ export const Container = styled.div`
     width: 80%;
     align-items: center;
     flex-direction:${props => props.side === "left" ? "row" : "row-reverse"}; 
-    margin-top: 50px; 
+    margin-top: 50px;
+    margin-bottom: 50px;
     margin-right: auto;
     margin-left: auto;
 
     @media screen and (max-width: 768px){
     width:100%;
+    flex-direction: column;
+    margin-top:0px;
+    margin-bottom:0px;
     }
 
     &:after {
@@ -56,6 +66,6 @@ export const Container = styled.div`
     clear: both;
     }`
 
-    
+
 
 

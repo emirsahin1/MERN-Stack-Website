@@ -16,7 +16,7 @@ class Home extends React.Component {
                     <p>Lorem Blimpsum Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                 </TextContainer>
                 <ButtonContainer>
-                    <ButtonText>Download Now</ButtonText>
+                    <ButtonText>Download</ButtonText>
                 </ButtonContainer> 
                 <LightTextContainer>
                     <p>Lorem Blimpsum Lorem ipsum dolor sit amet consectetur adipisicing elit.

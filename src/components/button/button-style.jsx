@@ -23,7 +23,11 @@ export const ButtonContainer = styled.div`
         border-color:#55c66f;
         background-color: #28405b;
         box-shadow: 0px 20px 60px #9ce7a65e, 0px 20px 60px #9ce7a65e;
+    }
 
+    @media screen and (max-width: 768px){
+        margin-top: 30px;
+        margin-bottom: 50px;
     }
 `
 
