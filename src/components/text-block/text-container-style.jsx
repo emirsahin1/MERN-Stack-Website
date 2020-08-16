@@ -18,27 +18,32 @@ export const TextContainer = styled.div`
 
     ${props => {
         console.log(props.side);
-        
+
         if (props.side === "left") {
             return css`
             margin-right: 3vw;
             `}
-        else if(props.side === "right") return css`margin-left: 3vw;`
+        else if (props.side === "right") return css`margin-left: 3vw;`
     }
     }
 
-    ${props => {   if (props.animated) {            
+    ${props => {
+        if (props.animated) {
             return css`
             opacity: 0;`
-    }}}
+        }
+    }}
 
-    ${props => {   if (props.beginAnimation) {
+    ${props => {
+        if (props.beginAnimation) {
             return css`
             transition: opacity 0.7s ease-out;
             opacity: 100;
-    ` }}}
+    ` }
+    }}
 
-    ${props => {   if (props.light) {            
+    ${props => {
+        if (props.light) {
             return css`
             background-color:#00000082;
             & p{
@@ -46,7 +51,8 @@ export const TextContainer = styled.div`
                 text-shadow: 0 0 20px black;
             }
             `
-    }}}
+        }
+    }}
 
     
 
@@ -58,8 +64,15 @@ export const TextContainer = styled.div`
     
     border-radius: 20px;
     }
-
-    
-
 `
-//TODO - Make new variables for different style extensions. 
+
+export const LightTextContainer = styled(TextContainer)`
+
+    background-color:#00000082;
+
+    & p{
+        color: #ffffff;
+        text-shadow: 0 0 20px black;
+    }`
+
+
