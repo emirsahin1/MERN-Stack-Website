@@ -38,6 +38,12 @@ class Home extends React.Component {
                     <ScrollMarker ref={this.marker}/>
                     <ButtonText>Download Now</ButtonText>
                 </ButtonContainer> 
+                <TextContainer light>
+                    <p>Lorem Blimpsum Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Lorem Blimpsum Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Lorem Blimpsum Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Lorem Blimpsum Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                </TextContainer>
                 <ImageBlock side="right" image={require("../../images/slideshow-images/slide1.jpg")}/>
                 <ImageBlock side="left" image={require("../../images/slideshow-images/slide3.jpg")}/>
                 <ImageBlock side="right" image={require("../../images/slideshow-images/Slide4.jpg")}/>

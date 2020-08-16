@@ -9,6 +9,13 @@ export const TextContainer = styled.div`
     text-align:center;
     border-radius: 30px;
 
+    & p{
+        color: #ffffff;
+        padding: calc(2% + 5px) 4%;
+        font-family: 'Raleway', sans-serif;
+        font-size: 25px;
+    }
+
     ${props => {
         console.log(props.side);
         
@@ -31,13 +38,17 @@ export const TextContainer = styled.div`
             opacity: 100;
     ` }}}
 
-    & p{
-        color: #ffffff;
-        text-shadow: 0 0 20px black;
-        padding: calc(2% + 5px) 4%;
-        font-family: 'Raleway', sans-serif;
-        font-size: 25px;
-    }
+    ${props => {   if (props.light) {            
+            return css`
+            background-color:#00000082;
+            & p{
+                color: #ffffff;
+                text-shadow: 0 0 20px black;
+            }
+            `
+    }}}
+
+    
 
     @media screen and (max-width: 768px){
         & p{
@@ -51,3 +62,4 @@ export const TextContainer = styled.div`
     
 
 `
+//TODO - Make new variables for different style extensions. 
