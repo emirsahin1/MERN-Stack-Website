@@ -1,10 +1,12 @@
 import styled, {css} from "styled-components";
 import {device} from "../../device-sizes"
+import { Link } from "react-router-dom";
 
-export const ButtonContainer = styled.div`
+export const ButtonContainer = styled(Link)`
 
     background-color:#1D1D1D;
     width: 50vw;
+    text-decoration:none;
     max-width: 340px;
     min-width: 120px;
     height: 80px;
@@ -30,14 +32,16 @@ export const ButtonContainer = styled.div`
         margin-top: 30px;
         margin-bottom: 50px;
     }
-`
-
-export const ButtonText = styled.div`
+    
+    &>*{
     font-size: 30px;
     color: #ffffff;
+    text-decoration:none;
+
 
     @media ${device.mobile}{
 
     font-size: max(20px, 4vw);
+    }
     }
 `

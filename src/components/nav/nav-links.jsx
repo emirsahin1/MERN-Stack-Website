@@ -1,5 +1,6 @@
 import React from "react";
-import {NavLinksContainer, NavLink, NavLine, Circle, Burger, Line1, Line2, Line3 } from './nav-bar-style'
+import { BrowserRouter as Router, Link, Route, Switch } from "react-router-dom";
+import { NavLinksContainer, NavLink, NavLine, Circle, Burger, Line1, Line2, Line3 } from './nav-bar-style'
 
 /**
  * Emir Sahin
@@ -27,32 +28,39 @@ class Navlinks extends React.Component {
     render() {
 
         return (
-            <div>
-                <NavLinksContainer isMobileNavActive={this.state.isMobileNavActive} isNavAnimActive={this.state.isNavAnimActive}>
-                    <NavLink isLinkAnimActive={this.state.isLinkAnimActive} index="0"  onMouseEnter={() => this.circleGlow("l0Hovering", true)}
-                                                    onMouseLeave={() => this.circleGlow("l0Hovering", false)}><a href="ww">Home</a></NavLink>
+                <div>
+                    <NavLinksContainer isMobileNavActive={this.state.isMobileNavActive} isNavAnimActive={this.state.isNavAnimActive}>
+                        <NavLink isLinkAnimActive={this.state.isLinkAnimActive} index="0" onMouseEnter={() => this.circleGlow("l0Hovering", true)}
+                            onMouseLeave={() => this.circleGlow("l0Hovering", false)}>
+                            <Link to="/">Home</Link>
+                        </NavLink>
 
-                    <div><Circle isHovering={this.state.l0Hovering}></Circle></div>
-                    <NavLine className="nav-line"></NavLine>
-                    <div><Circle isHovering={this.state.l1Hovering}></Circle></div>
+                        <div><Circle isHovering={this.state.l0Hovering}></Circle></div>
+                        <NavLine className="nav-line"></NavLine>
+                        <div><Circle isHovering={this.state.l1Hovering}></Circle></div>
 
-                    <NavLink isLinkAnimActive={this.state.isLinkAnimActive} index="1" onMouseEnter={() => this.circleGlow("l1Hovering", true)}
-                                                    onMouseLeave={() => this.circleGlow("l1Hovering", false)}><a href="ww">Download</a></NavLink>
+                        <NavLink isLinkAnimActive={this.state.isLinkAnimActive} index="1" onMouseEnter={() => this.circleGlow("l1Hovering", true)}
+                            onMouseLeave={() => this.circleGlow("l1Hovering", false)}>
+                            <Link to="/Download">Download</Link>
+                        </NavLink>
 
-                    <div><Circle isHovering={this.state.l1Hovering}></Circle></div>
-                    <NavLine className="nav-line"></NavLine>
-                    <div><Circle isHovering={this.state.l2Hovering}></Circle></div>
+                        <div><Circle isHovering={this.state.l1Hovering}></Circle></div>
+                        <NavLine className="nav-line"></NavLine>
+                        <div><Circle isHovering={this.state.l2Hovering}></Circle></div>
 
-                    <NavLink isLinkAnimActive={this.state.isLinkAnimActive} index="2" onMouseEnter={() => this.circleGlow("l2Hovering", true)}
-                                                    onMouseLeave={() => this.circleGlow("l2Hovering", false)}><a href="ww">Information</a></NavLink>
-                </NavLinksContainer>
+                        <NavLink isLinkAnimActive={this.state.isLinkAnimActive} index="2" onMouseEnter={() => this.circleGlow("l2Hovering", true)}
+                            onMouseLeave={() => this.circleGlow("l2Hovering", false)}>
+                            <Link to="/Information">Information</Link>
+                        </NavLink>
+                    </NavLinksContainer>
 
-                <Burger isMobileNavActive={this.state.isMobileNavActive} onClick={this.burgerClick.bind(this)}>
-                    <Line1></Line1>
-                    <Line2></Line2>
-                    <Line3></Line3>
-                </Burger>
-            </div>);
+                    <Burger isMobileNavActive={this.state.isMobileNavActive} onClick={this.burgerClick.bind(this)}>
+                        <Line1></Line1>
+                        <Line2></Line2>
+                        <Line3></Line3>
+                    </Burger>
+                </div>
+        );
     }
 
     componentDidMount() {
@@ -78,11 +86,11 @@ class Navlinks extends React.Component {
     burgerClick() {
         this.setState(prevState => ({
             isMobileNavActive: !prevState.isMobileNavActive,
-            isNavAnimActive: true, 
-            isLinkAnimActive: !prevState.isLinkAnimActive, 
+            isNavAnimActive: true,
+            isLinkAnimActive: !prevState.isLinkAnimActive,
             isBurgerAnimActive: !prevState.isBurgerAnimActive
         })
-        )  
+        )
     }
 
     /**

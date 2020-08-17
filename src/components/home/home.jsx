@@ -4,6 +4,8 @@ import ImageBlock from "../image-block/image-block"
 import { ButtonContainer, ButtonText } from "../button/button-style"
 import { TextContainer, LightTextContainer } from "../text-block/text-container-style"
 import { Divider, TransparentDivider } from "../utility-styles/utility-styles"
+import {Link} from "react-router-dom";
+
 
 class Home extends React.Component {
 
@@ -15,8 +17,8 @@ class Home extends React.Component {
                 <TextContainer mobileFontSize="14px" animationProps={this.animationProps}>
                     <p>Lorem Blimpsum Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                 </TextContainer>
-                <ButtonContainer>
-                    <ButtonText>Download</ButtonText>
+                <ButtonContainer exact to="/Download">
+                    <p>Download</p>
                 </ButtonContainer>
                 <LightTextContainer>
                     <p>Lorem Blimpsum Lorem ipsum dolor sit amet consectetur adipisicing elit.

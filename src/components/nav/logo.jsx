@@ -1,5 +1,6 @@
 import React from 'react';
 import { LogoContainer, LogoSvg, LogoText } from './logo-style'
+import { Link } from 'react-router-dom';
 
 /* Contains an SVG logo made of text*/
 class Logo extends React.Component {
@@ -7,7 +8,7 @@ class Logo extends React.Component {
     render() {
         return (
             <LogoContainer>
-                <a href="ww">
+                <Link to="/">
                     <LogoSvg xmlns="http://www.w3.org/2000/svg">
                         <defs>
                             <linearGradient spreadMethod="pad" id="text-gradient" x1="100%" y1="0%" x2="0%" y2="0%">
@@ -18,7 +19,7 @@ class Logo extends React.Component {
                         </defs>
                         <LogoText textAnchor="middle" x="50%" y="64%">MSL</LogoText>
                     </LogoSvg>
-                </a>
+                </Link>
             </LogoContainer>
         )
     }
