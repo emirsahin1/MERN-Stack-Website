@@ -1,12 +1,13 @@
 import styled, {css} from "styled-components";
+import {device} from "../../device-sizes"
 
 export const ButtonContainer = styled.div`
 
     background-color:#1D1D1D;
     width: 50vw;
-    max-width: 400px;
+    max-width: 340px;
     min-width: 120px;
-    height: 13vh;
+    height: 80px;
     margin: 50px auto 65px;
     display:flex; 
     align-items:center;
@@ -25,7 +26,7 @@ export const ButtonContainer = styled.div`
         box-shadow: 0px 20px 60px #9ce7a65e, 0px 20px 60px #9ce7a65e;
     }
 
-    @media screen and (max-width: 768px){
+    @media ${device.mobile}{
         margin-top: 30px;
         margin-bottom: 50px;
     }
@@ -35,7 +36,7 @@ export const ButtonText = styled.div`
     font-size: 30px;
     color: #ffffff;
 
-    @media screen and (max-width: 768px){
+    @media ${device.mobile}{
 
     font-size: max(20px, 4vw);
     }

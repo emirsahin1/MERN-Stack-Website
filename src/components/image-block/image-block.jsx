@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { ImageContainer, BlockImage, Container } from "./image-block-style";
 import { ScrollMarker } from "../utility-styles/utility-styles";
-import { TextContainer } from "../text-block/text-container-style"
+import { TextContainer, LightTextContainer } from "../text-block/text-container-style"
 import { createRef } from 'react';
 
 

@@ -1,4 +1,5 @@
 import styled, { css } from "styled-components"
+import {device} from "../../device-sizes"
 
 export const TextContainer = styled.div`
 
@@ -10,7 +11,7 @@ export const TextContainer = styled.div`
     text-align:center;
     border-radius: 30px;
 
-    & p{
+    &>*{
         color: #ffffff;
         padding: calc(2% + 5px) 4%;
         font-family: 'Raleway', sans-serif;
@@ -33,8 +34,8 @@ export const TextContainer = styled.div`
     ` }
     }}
 
-    @media screen and (max-width: 768px){
-        & p{
+    @media ${device.mobile}{
+        &>*{
         font-size:${props => props.mobileFontSize ? `min(max(${props.mobileFontSize}, 5vw), 25px)` : "min(5vw, 20px)"};
         padding: 5%;
         }
@@ -50,7 +51,7 @@ export const LightTextContainer = styled(TextContainer)`
 
     background-color:#00000082;
 
-    & p{
+    &>*{
         color: #ffffff;
         text-shadow: 0 0 20px black;
     }`

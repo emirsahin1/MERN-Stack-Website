@@ -1,4 +1,5 @@
 import styled, { css } from "styled-components"
+import {device} from "../../device-sizes"
 
 
 export const ImageContainer = styled.div`
@@ -28,7 +29,7 @@ export const ImageContainer = styled.div`
         }
     }}
 
-    @media screen and (max-width: 768px){
+    @media ${device.mobile}{
         width: 80vw;
         height: 80vw;
         min-width: 0;
@@ -53,7 +54,7 @@ export const Container = styled.div`
     margin-right: auto;
     margin-left: auto;
 
-    @media screen and (max-width: 768px){
+    @media ${device.mobile}{
     width:100%;
     flex-direction: column;
     margin-top:0px;

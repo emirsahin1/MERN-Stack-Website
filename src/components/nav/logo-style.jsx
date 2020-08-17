@@ -1,4 +1,5 @@
 import styled, { css } from 'styled-components';
+import {device} from "../../device-sizes"
 
 export const LogoContainer = styled.div`
     font-family: 'Raleway', sans-serif;
@@ -6,7 +7,7 @@ export const LogoContainer = styled.div`
     left: 20px;
     margin-left: 8%;
 
-    @media screen and (max-width: 768px){
+    @media ${device.mobile}{
 
     position: relative;
     left: 0px;

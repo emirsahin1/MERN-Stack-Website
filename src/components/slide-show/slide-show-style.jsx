@@ -1,4 +1,5 @@
 import styled, { css } from 'styled-components';
+import {device} from "../../device-sizes"
 
 export const Image = styled.img`
     flex-grow: 0;
@@ -20,7 +21,7 @@ export const SlideshowContainer = styled.div`
     overflow: hidden;
     background-color: rgb(29, 29, 29);
 
-    @media screen and (max-width: 768px) {
+    @media ${device.mobile} {
         height: 43vh;
     }
 `
@@ -45,7 +46,7 @@ export const Circle = styled.div`
   transition: all 0.2s ease-in;
   cursor: pointer;
 
-  @media screen and (max-width: 768px) {
+  @media ${device.mobile} {
     width: 3vh;
     height: 3vh;
     max-width: var(--circle-size);
@@ -79,7 +80,7 @@ export const SlideArrow = styled.svg`
     opacity: 1;
   }
 
-  @media screen and (max-width: 768px) {
+  @media ${device.mobile} {
     --arrow-location: 9%;
     --arrow-size: calc(10% + 10px);
   }

@@ -1,4 +1,5 @@
 import styled, { css, keyframes } from 'styled-components';
+import {device} from "../../device-sizes"
 
 const navLinkFadeForward = keyframes`
     from{
@@ -36,7 +37,7 @@ export const NavBar = styled.nav`
     min-height: 60px;
     background-color: rgb(29, 29, 29);
 
-    @media screen and (max-width: 768px){
+    @media ${device.mobile}{
         border-radius: 0;
         justify-content: space-between;
     }
@@ -64,7 +65,7 @@ export const NavLinksContainer = styled.ul`
         }
     }
 
-    @media screen and (max-width: 768px){
+    @media ${device.mobile}{
         position: absolute;
         display: flex;
         flex-direction: column;
@@ -106,7 +107,7 @@ export const NavLink = styled.li`
         border-color: var(--hover-color);
     }
 
-    @media screen and (max-width: 768px){
+    @media ${device.mobile}{
         border-radius: 60px;
         border-width: 13px;
         border-style: solid;
@@ -152,7 +153,7 @@ export const Circle = styled.div`
         }
     }
 
-    @media screen and (max-width: 768px){
+    @media ${device.mobile}{
         display: none;
     }`
 
@@ -170,7 +171,7 @@ export const Burger = styled.div`
     transition: all 0.3s ease-in;
     }
     
-    @media screen and (max-width: 768px){
+    @media ${device.mobile}{
         display: block;
         margin-right: 40px;
 
