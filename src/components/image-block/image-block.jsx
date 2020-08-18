@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { ImageContainer, BlockImage, Container } from "./image-block-style";
 import { ScrollMarker } from "../utility-styles/utility-styles";
-import { TextContainer, LightTextContainer } from "../text-block/text-container-style"
+import { TextContainer } from "../text-block/text-container-style"
 import { createRef } from 'react';
 
 
@@ -33,9 +33,11 @@ export default class ImageBlock extends Component {
                 </ImageContainer>
                 <ScrollMarker ref={this.container}></ScrollMarker>
                 <TextContainer mobileFontSize={this.props.mobileFontSize} animated={true} beginAnimation={this.state.beginAnimation}>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                    Nostrum totam perferendis quas! Minima quis libero voluptatibus quia, dolorum voluptas,
-                    adipisci quas cupiditate quae hic voluptates modi, quam suscipit dolore quo?</p>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                        Nostrum totam perferendis quas! Minima quis libero voluptatibus quia, dolorum voluptas,
+                        adipisci quas cupiditate quae hic voluptates modi, quam suscipit dolore quo?
+                    </p>
                 </TextContainer>
             </Container>
         )
