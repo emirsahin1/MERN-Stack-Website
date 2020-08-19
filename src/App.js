@@ -27,4 +27,3 @@ function App() {
 export default App;
 
 //TODO Comment Finished Code
-//TODO Make mobile button close after click

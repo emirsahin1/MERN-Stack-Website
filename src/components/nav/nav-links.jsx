@@ -13,7 +13,7 @@ class Navlinks extends React.Component {
         this.state = {
             isMobileNavActive: false,
             isNavAnimActive: false,
-            isLinkAnimActive: true,
+            isLinkAnimActive: false,
             isBurgerAnimActive: false,
             l0Hovering: false,
             l1Hovering: false,
@@ -32,7 +32,7 @@ class Navlinks extends React.Component {
                     <NavLinksContainer isMobileNavActive={this.state.isMobileNavActive} isNavAnimActive={this.state.isNavAnimActive}>
                         <NavLink isLinkAnimActive={this.state.isLinkAnimActive} index="0" onMouseEnter={() => this.circleGlow("l0Hovering", true)}
                             onMouseLeave={() => this.circleGlow("l0Hovering", false)}>
-                            <Link to="/">Home</Link>
+                            <Link to="/" onClick={this.burgerClick.bind(this)}>Home</Link>
                         </NavLink>
 
                         <div><Circle isHovering={this.state.l0Hovering}></Circle></div>
@@ -65,7 +65,8 @@ class Navlinks extends React.Component {
 
     componentDidMount() {
         window.addEventListener('resize', () => {
-            this.setState(prevState => ({ isNavAnimActive: false }),)
+            this.setState(prevState => ({ isNavAnimActive: false, isMobileNavActive: false, isLinkAnimActive: false,
+                isBurgerAnimActive: !prevState.isBurgerAnimActive  }),)
         }
         )
     }
@@ -83,7 +84,7 @@ class Navlinks extends React.Component {
     /**
      * Event handler for the burger click. Toggles the mobile nav animations. 
      */
-    burgerClick() {
+    burgerClick(isNavAnimActive) {
         this.setState(prevState => ({
             isMobileNavActive: !prevState.isMobileNavActive,
             isNavAnimActive: true,

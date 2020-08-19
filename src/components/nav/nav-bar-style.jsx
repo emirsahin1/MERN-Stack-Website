@@ -121,9 +121,9 @@ export const NavLink = styled.li`
 
         ${props => {
         if (props.isLinkAnimActive) {            
-            return css`animation: ${navLinkFadeBack} 0.5s ease forwards ${-props.index / 7 + 0.3}s; opacity: 1;`}
-        else {
             return css`animation: ${navLinkFadeForward} 0.5s ease forwards ${props.index / 7 + 0.3}s;`}
+        else {
+            return css`animation: ${navLinkFadeBack} 0.5s ease forwards ${-props.index / 7 + 0.3}s; opacity: 1;`}
         }} 
     }
 `
