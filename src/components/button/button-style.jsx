@@ -48,7 +48,8 @@ export const RoundButtonContainer = styled(Link)`
         }
     }`
 
-export const SquareButtonContainer = styled(RoundButtonContainer)`
+export const DownloadButtonContainer = styled(RoundButtonContainer)`
     border-radius: 0px;
+    border-style: none;
     /* max-width: 800px; */
 `

@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { TextContainer, LightTextContainer } from "../../text-block/text-container-style"
 import {TransparentDivider} from "../../utility-styles/utility-styles"
-import {SquareButtonContainer} from "../../button/button-style"
+import {DownloadButtonContainer} from "../../button/button-style"
 import {DownloadContainer} from "../download/download-container"
 
 export default class DownloadPage extends Component {
@@ -12,7 +12,7 @@ export default class DownloadPage extends Component {
                 <p>Download</p>
             </TextContainer> */}
             <DownloadContainer>
-            <SquareButtonContainer><p>Download</p></SquareButtonContainer>
+            <DownloadButtonContainer><p>Download</p></DownloadButtonContainer>
             <LightTextContainer><p>Version 0.1</p></LightTextContainer>
             </DownloadContainer>
             <TransparentDivider height="1000px"/>
