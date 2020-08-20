@@ -1,4 +1,4 @@
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 import {device} from "../../device-sizes"
 
 export const LogoContainer = styled.div`
@@ -13,22 +13,6 @@ export const LogoContainer = styled.div`
     left: 0px;
     margin-left: 20px;
     }
-
-    /* ${props => {if (props.context === "SlideShow") {
-    return css`
-    left:calc(50% - 100px);
-    margin:0;
-
-    ${LogoSvg}{
-    width:200px;
-    height:200px;
-    }
-    ${LogoText}{
-    font-size:50px;
-    text-shadow: 0px 0px 40px black,
-                 2px 2px 50px black,
-                 -2px -2px 50px black;
-    }`}}} */
 `
 
 export const LogoSvg = styled.svg`
@@ -47,11 +31,4 @@ export const LogoText = styled.text`
     ${LogoContainer}:hover &{
         font-size: 25px;
     }
-
-    /* ${props => {if (props.context === "NavBar") {
-    return css`
-    ${LogoContainer}:hover &{
-        font-size: 25px;
-    }
-    `}}} */
 `

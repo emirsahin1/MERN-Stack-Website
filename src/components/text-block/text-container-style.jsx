@@ -1,6 +1,7 @@
 import styled, { css } from "styled-components"
 import {device} from "../../device-sizes"
 
+/**Text container, used with an element containing text inside. */
 export const TextContainer = styled.div`
 
     margin: 50px auto 10px auto;
@@ -17,8 +18,7 @@ export const TextContainer = styled.div`
         font-family: 'Raleway', sans-serif;
         font-size: 25px;
     }
-
-
+    /**If animated, the initial styles are set. */
     ${props => {
         if (props.animated) {
             return css`
@@ -46,7 +46,7 @@ export const TextContainer = styled.div`
     margin-bottom: 10px;
     }
 `
-
+/**Light version of the textContainer */
 export const LightTextContainer = styled(TextContainer)`
 
     background-color:#00000082;

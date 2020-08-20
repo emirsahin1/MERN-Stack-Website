@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components';
 import {device} from "../../device-sizes"
 
-export const Image = styled.img`
+export const SlideImage = styled.img`
     flex-grow: 0;
     flex-shrink: 0;
     min-height: 100%;
@@ -10,6 +10,7 @@ export const Image = styled.img`
     height: auto;
     position: absolute;
     transition: all 0.25s ease-in;
+    opacity: ${props => props.opacity}
 `
 export const SlideshowContainer = styled.div`
     display: flex;
@@ -64,6 +65,7 @@ export const SlideArrow = styled.svg`
   opacity: 0.3;
   cursor: pointer;
   transition: all 0.14s ease-in;
+  /**Puts the arrow to the left if assing left*/
   ${props => {if(props.left){
         return css`
         left: calc(var(--arrow-location) - var(--arrow-size) + 20px);

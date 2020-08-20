@@ -5,6 +5,9 @@ import { ButtonContainer } from "../button/button-style"
 import { TextContainer, LightTextContainer } from "../text-block/text-container-style"
 import { Divider, TransparentDivider } from "../utility-styles/utility-styles"
 
+/**
+ * Home page
+ */
 
 export default class Home extends React.Component {
 

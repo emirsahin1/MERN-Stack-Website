@@ -1,26 +1,25 @@
 import React from "react";
 import Navlinks from "./nav-links.jsx"
 import Logo from "./logo.jsx"
-import {NavBar, NavPlaceHolder} from "./nav-bar-style"
-// import "./nav-bar.css"
+import {NavContaier, NavPlaceHolder} from "./nav-bar-style"
 
 /**
  * Navigation Bar
  */
 
-class Navbar extends React.Component {
+export default class Navbar extends React.Component {
 
     render() {
         return (
             <div>
-            <NavBar>
+            <NavContaier>
                 <Logo/>
                 <Navlinks />
-            </NavBar>
+            </NavContaier>
+            {/* The place holder is the same size as the navbar. It is used to take the space of the fixed navbar */}
             <NavPlaceHolder></NavPlaceHolder>
             </div>
         );
     }
 }
 
-export default Navbar;

@@ -1,7 +1,7 @@
 import styled from "styled-components"
 import {device} from "../../device-sizes"
 
-
+/**Marker used to activate scroll events */
 export const ScrollMarker = styled.div`
     width: 10px;
     height: 10px;

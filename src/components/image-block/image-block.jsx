@@ -11,6 +11,7 @@ export default class ImageBlock extends Component {
         super(props)
 
         this.state = {
+            //Starts the animations when true.
             beginAnimation: false
         }
 
@@ -20,7 +21,8 @@ export default class ImageBlock extends Component {
             threshold: 1.0
         }
 
-        this.container = createRef();
+        this.scrollMark = createRef();
+        //Scroll marker observer
         this.observerHandler = this.observerHandler.bind(this);
         this.observer = new IntersectionObserver(this.observerHandler, this.observerOptions);
     }
@@ -31,7 +33,7 @@ export default class ImageBlock extends Component {
                 <ImageContainer animateImage={this.state.beginAnimation}>
                     <BlockImage src={this.props.image} alt="image not loaded"></BlockImage>
                 </ImageContainer>
-                <ScrollMarker ref={this.container}></ScrollMarker>
+                <ScrollMarker ref={this.scrollMark}></ScrollMarker>
                 <TextContainer mobileFontSize={this.props.mobileFontSize} animated={true} beginAnimation={this.state.beginAnimation}>
                     <p>
                         Lorem ipsum dolor sit amet consectetur, adipisicing elit.
@@ -44,10 +46,11 @@ export default class ImageBlock extends Component {
     }
 
     componentDidMount() {
-        this.observer.observe(this.container.current)
+        this.observer.observe(this.scrollMark.current)
     }
 
     observerHandler(entries) {
+        //Checks to see if the container is intersecting the scroll mark. 
         if (entries[0].isIntersecting) {
             this.setState(prevState => ({ beginAnimation: true }), console.log(this.state))
         }

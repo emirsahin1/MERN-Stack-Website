@@ -1,6 +1,11 @@
 import styled, { css, keyframes } from 'styled-components';
 import {device} from "../../device-sizes"
 
+const variables = {
+    navBarHeight: "60px"
+}
+
+/**Animation of the navLinks sliding forward */
 const navLinkFadeForward = keyframes`
     from{
             opacity: 0;
@@ -10,6 +15,7 @@ const navLinkFadeForward = keyframes`
             transform: translateX(0px); } 
 `
 
+/**Animation of the navLinks sliding back */
 const navLinkFadeBack = keyframes`
     from{
             opacity: 1;
@@ -18,29 +24,29 @@ const navLinkFadeBack = keyframes`
             opacity: 0;
             transform: translateX(50px); }
     `
-export const NavPlaceHolder = styled.div`
 
-    height:60px;
-    width:100%;
-`
-export const NavBar = styled.nav`
-    font-family: 'Raleway', sans-serif;
+export const NavContaier = styled.nav`
     --circle-color: #aa519c;
     --hover-color: #aa519c;
+    font-family: 'Raleway', sans-serif;
     display: flex;
     position:fixed;
     top:0;
+    height: ${variables.navBarHeight};
     width:100%;
     z-index:12;
     align-items: center;
     justify-content: center;
-    min-height: 60px;
     background-color: rgb(29, 29, 29);
 
     @media ${device.mobile}{
         border-radius: 0;
         justify-content: space-between;
     }
+`
+export const NavPlaceHolder = styled.div`
+    height: ${variables.navBarHeight};
+    width:100%;
 `
 
 export const NavLinksContainer = styled.ul`

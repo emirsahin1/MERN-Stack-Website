@@ -1,7 +1,7 @@
 import styled, { css } from "styled-components"
 import {device} from "../../device-sizes"
 
-
+/**The container for the image. Takes in a required animate property which animates on true.*/
 export const ImageContainer = styled.div`
     float:right;
     width: 40vw;
@@ -44,6 +44,7 @@ export const BlockImage = styled.img`
     max-height:100%;
     
 `
+/**The container can take an optional side prop which determines the side the image is rendered on.*/ 
 export const Container = styled.div`
     display: flex;
     width: 80%;

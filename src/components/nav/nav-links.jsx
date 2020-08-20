@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Link, Route, Switch } from "react-router-dom";
+import {Link} from "react-router-dom";
 import { NavLinksContainer, NavLink, NavLine, Circle, Burger, Line1, Line2, Line3 } from './nav-bar-style'
 
 /**
@@ -41,7 +41,7 @@ class Navlinks extends React.Component {
 
                         <NavLink isLinkAnimActive={this.state.isLinkAnimActive} index="1" onMouseEnter={() => this.circleGlow("l1Hovering", true)}
                             onMouseLeave={() => this.circleGlow("l1Hovering", false)}>
-                            <Link to="/Download">Download</Link>
+                            <Link to="/Download" onClick={this.burgerClick.bind(this)}>Download</Link>
                         </NavLink>
 
                         <div><Circle isHovering={this.state.l1Hovering}></Circle></div>
@@ -50,7 +50,7 @@ class Navlinks extends React.Component {
 
                         <NavLink isLinkAnimActive={this.state.isLinkAnimActive} index="2" onMouseEnter={() => this.circleGlow("l2Hovering", true)}
                             onMouseLeave={() => this.circleGlow("l2Hovering", false)}>
-                            <Link to="/Information">Information</Link>
+                            <Link to="/Information" onClick={this.burgerClick.bind(this)}>Information</Link>
                         </NavLink>
                     </NavLinksContainer>
 
