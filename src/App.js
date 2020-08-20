@@ -1,8 +1,8 @@
 import React from "react";
 import Navbar from "./components/nav/nav-bar.jsx";
-import Home from "./components/home/home.jsx";
-import InformationPage from "./components/information/information";
-import DownloadPage from "./components/download/download-page";
+import Home from "./components/pages/home/home.jsx";
+import InformationPage from "./components/pages/information/information";
+import DownloadPage from "./components/pages/download/download-page";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import ScrollToTop  from "./components/utility-components/scroll-to-top";
 import "./index.css";
@@ -26,5 +26,4 @@ function App() {
 
 export default App;
 
-//TODO Comment Finished Code
 //TODO Write Tests
