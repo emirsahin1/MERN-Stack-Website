@@ -1,7 +1,7 @@
 import React from 'react'
 import SlideShow from "../../slide-show/slide-show"
 import ImageBlock from "../../image-block/image-block"
-import { RoundButtonContainer } from "../../button/button-style"
+import { RoundButtonContainer, DownloadButtonContainer } from "../../button/button-style"
 import { TextContainer, LightTextContainer } from "../../text-block/text-container-style"
 import { Divider, TransparentDivider } from "../../utility-styles/utility-styles"
 
@@ -45,3 +45,4 @@ export default class Home extends React.Component {
     }
 }
 
+//TODO MAKE FOOTER

@@ -4,12 +4,6 @@ import {device} from "../../../device-sizes"
 
 export const DownloadContainer = styled.div`
 
-    // display:flex;
-    width: 800px;
-    align-items: center;
-    justify-content: center;
+    width: 50vw;
     margin: auto;
-
-
-
 `

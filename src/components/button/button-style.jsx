@@ -22,7 +22,7 @@ export const RoundButtonContainer = styled(Link)`
     margin: 50px auto 65px;
 
     /* Transition for the glow animations.*/
-    transition: box-shadow 0.25s ease-out, border-color 0.25s ease-out ;
+    transition: box-shadow 0.25s ease-out, border-color 0.25s ease-out, background-color 0.25s ease-out;
     box-shadow: 0px 20px 30px rgba(0,0,0,0.4), 0px 20px 30px rgba(0,0,0,0.4);
 
     &:hover{
@@ -43,13 +43,34 @@ export const RoundButtonContainer = styled(Link)`
     text-decoration:none;
 
 
-    @media ${device.mobile}{
-        font-size: max(20px, 4vw);
-        }
+        @media ${device.mobile}{
+            font-size: max(20px, 4vw);
+            }
     }`
 
 export const DownloadButtonContainer = styled(RoundButtonContainer)`
     border-radius: 0px;
     border-style: none;
-    /* max-width: 800px; */
+    box-shadow: none;
+    margin-bottom:10px;
+    margin-top: 50px;
+    background-color:#000000b8;
+    
+    &>*{
+    color: #c0ffb8;
+    text-decoration:none;
+    }
+
+    &:hover{
+        background-color: #c0ab8c;       
+    }
+
+    @media ${device.mobile}{
+        margin-bottom:10px;
+        margin-top: 50px;
+    }
 `
+
+
+
+//TODO RENAME THESE BUTTONS
