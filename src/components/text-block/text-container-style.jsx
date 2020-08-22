@@ -110,15 +110,24 @@ export const DownloadText = styled(LightTextContainer)`
     margin-bottom: 70px;
     width: 50vw;
     max-width: 340px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
 
     @media ${device.mobile}{
         border-radius: 0px;
         border-style: none;
         margin-top:0px;
-        margin-bottom: 70px;
+        margin-bottom: 40px;
         width: 50vw;
+        
+        & p{
+            font-size: max(20px,4vw);
+        }
+        ${props => {return props.styles}};
     }
 
+    ${props => {return props.styles}};
 
 
 `

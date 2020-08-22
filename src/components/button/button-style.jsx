@@ -3,7 +3,7 @@ import {device} from "../../device-sizes"
 import { Link } from "react-router-dom";
 
 /**Container for Link buttons. To be used with an inner element containing the button's text.*/
-export const RoundButtonContainer = styled(Link)`
+export const RoundButton = styled(Link)`
 
     cursor: pointer;
     text-decoration:none;
@@ -28,7 +28,7 @@ export const RoundButtonContainer = styled(Link)`
     &:hover{
         border-color:#d1a9c9;
         background-color: #28405b;
-        box-shadow: 0px 20px 60px #9ce7a65e, 0px 20px 60px #9ce7a65e;
+        box-shadow: 10px 10px 30px #9ce7a65e;
     }
 
     @media ${device.mobile}{
@@ -48,7 +48,7 @@ export const RoundButtonContainer = styled(Link)`
             }
     }`
 
-export const DownloadButtonContainer = styled(RoundButtonContainer)`
+export const DownloadButton = styled(RoundButton)`
     border-radius: 0px;
     border-style: none;
     box-shadow: none;
@@ -67,8 +67,11 @@ export const DownloadButtonContainer = styled(RoundButtonContainer)`
 
     @media ${device.mobile}{
         margin-bottom:10px;
-        margin-top: 50px;
+        margin-top: 40px;
+        ${props => {return props.styles}}
     }
+
+    ${props => {return props.styles}}
 `
 
 

@@ -23,3 +23,15 @@ export const TransparentDivider = styled(Divider)`
     opacity:0;
 `
 
+export const FlexBox = styled.div`
+
+    display:flex; 
+    flex-direction: ${props => props.direction ? props.direction : "row"};
+    justify-content: ${props => props.horizontal ? props.horizontal : "center"}; 
+    align-items: ${props => props.vertical ? props.vertical : "center"};
+
+    ${props => {return props.styles}};
+
+
+
+`

@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { DownloadText, LightTextContainer, TextContainer } from "../../text-block/text-container-style"
 import { TransparentDivider } from "../../utility-styles/utility-styles"
-import { DownloadButtonContainer } from "../../button/button-style"
+import { DownloadButton } from "../../button/button-style"
 import { DownloadContainer } from "../download/download-container"
 
 export default class DownloadPage extends Component {
@@ -19,14 +19,14 @@ export default class DownloadPage extends Component {
                        <br/><br/>For Ios (Apple) mobile devices, our app is currently not <span>supported</span>. </p>
                 </LightTextContainer>
                 <DownloadContainer>
-                    <DownloadButtonContainer><p>Download</p></DownloadButtonContainer>
+                    <DownloadButton><p>Download</p></DownloadButton>
                     <DownloadText><p>Version 0.1</p></DownloadText>
                 </DownloadContainer>
                 <TextContainer>
                     <h3>Need help?</h3>
                     <p>Contact us as at <a href="/Information"><span>email@live.com</span></a></p>
                 </TextContainer>
-                <TransparentDivider height="1000px" />
+                <TransparentDivider height="200px" />
             </div>
         )
     }
