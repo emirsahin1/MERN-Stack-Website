@@ -18,6 +18,7 @@ export const TextContainer = styled.div`
         font-family: 'Raleway', sans-serif;
         font-size: 22px;
         line-height:30px;
+        text-align: ${props => props.side ? props.side : "center"}
     }
     
     /* Style for the headers in text */
@@ -129,3 +130,11 @@ export const DownloadText = styled(LightTextContainer)`
     ${props => {return props.styles}};
 `
 
+export const LargeLightTextContainer = styled(LightTextContainer)`
+
+    width:85%;
+
+
+
+
+`

@@ -23,7 +23,7 @@ class SlideShow extends React.Component {
         return (
             <SlideshowContainer>
                 <SlideImage opacity={this.state.imageOpacity} src={this.images[this.state.imageIndex]} />
-                <SlideOverlay><span>Lorem Ipsum</span></SlideOverlay>
+                {/* <SlideOverlay><span>Lorem Ipsum</span></SlideOverlay> */}
                 <CircleContainer>
                 {Array(this.numOfImages).fill().map( (element, index) => 
                 <Circle onClick={() => this.switchImage(null, index)} style={this.setActiveCircle(index)} key={index}></Circle>)}

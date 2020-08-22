@@ -15,7 +15,9 @@ export default class DownloadPage extends Component {
                        <br/><br/>For Ios (Apple) mobile devices, our app is currently not <span>supported</span>. </p>
                 </LightTextContainer>
                 <FlexBox direction="column;">
-                    <RectangleButton><p>Download</p></RectangleButton>
+                    <form method="get" action="../../../images/slide1.jpg">
+                    <RectangleButton type="submit"><p>Download</p></RectangleButton>
+                    </form>
                     <DownloadText><p>Version 0.1</p></DownloadText>
                 </FlexBox>
                 <TextContainer>

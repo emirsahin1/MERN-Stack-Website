@@ -2,7 +2,7 @@ import React from 'react'
 import SlideShow from "../../slide-show/slide-show"
 import ImageBlock from "../../image-block/image-block"
 import { RoundButton, RectangleButton } from "../../button/button-style"
-import { TextContainer, LightTextContainer, DownloadText } from "../../text-block/text-container-style"
+import { TextContainer, LightTextContainer, DownloadText,  } from "../../text-block/text-container-style"
 import { Divider, TransparentDivider, FlexBox } from "../../utility-styles/utility-styles"
 
 /**
