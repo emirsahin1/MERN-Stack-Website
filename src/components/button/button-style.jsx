@@ -48,7 +48,8 @@ export const RoundButton = styled(Link)`
             }
     }`
 
-export const DownloadButton = styled(RoundButton)`
+/**Rectangle Button. To be used with an inner element containing the button's text. */
+export const RectangleButton = styled(RoundButton)`
     border-radius: 0px;
     border-style: none;
     box-shadow: none;
@@ -56,6 +57,7 @@ export const DownloadButton = styled(RoundButton)`
     margin-top: 50px;
     background-color:#000000b8;
     
+    /**Styling for the inner text */
     &>*{
     color: #c0ffb8;
     text-decoration:none;
@@ -76,4 +78,3 @@ export const DownloadButton = styled(RoundButton)`
 
 
 
-//TODO RENAME THESE BUTTONS

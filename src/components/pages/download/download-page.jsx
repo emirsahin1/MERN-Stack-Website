@@ -1,16 +1,12 @@
 import React, { Component } from 'react'
 import { DownloadText, LightTextContainer, TextContainer } from "../../text-block/text-container-style"
-import { TransparentDivider } from "../../utility-styles/utility-styles"
-import { DownloadButton } from "../../button/button-style"
-import { DownloadContainer } from "../download/download-container"
+import { TransparentDivider, FlexBox } from "../../utility-styles/utility-styles"
+import { RectangleButton } from "../../button/button-style"
 
 export default class DownloadPage extends Component {
     render() {
         return (
             <div>
-                {/* <TextContainer>
-                <p>Download</p>
-            </TextContainer> */}
             <TransparentDivider height="20px" />
                 <LightTextContainer>
                     <h3>How to install</h3>
@@ -18,10 +14,10 @@ export default class DownloadPage extends Component {
                        Once downloaded on your mobile android device, <span>run</span> the downloaded file and allow the phone to install the application.
                        <br/><br/>For Ios (Apple) mobile devices, our app is currently not <span>supported</span>. </p>
                 </LightTextContainer>
-                <DownloadContainer>
-                    <DownloadButton><p>Download</p></DownloadButton>
+                <FlexBox direction="column;">
+                    <RectangleButton><p>Download</p></RectangleButton>
                     <DownloadText><p>Version 0.1</p></DownloadText>
-                </DownloadContainer>
+                </FlexBox>
                 <TextContainer>
                     <h3>Need help?</h3>
                     <p>Contact us as at <a href="/Information"><span>email@live.com</span></a></p>

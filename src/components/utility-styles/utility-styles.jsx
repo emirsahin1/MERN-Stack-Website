@@ -23,6 +23,7 @@ export const TransparentDivider = styled(Divider)`
     opacity:0;
 `
 
+/**FlexBox, takes in optional direction, horizontal, vertical and styles props */
 export const FlexBox = styled.div`
 
     display:flex; 
@@ -31,7 +32,4 @@ export const FlexBox = styled.div`
     align-items: ${props => props.vertical ? props.vertical : "center"};
 
     ${props => {return props.styles}};
-
-
-
 `

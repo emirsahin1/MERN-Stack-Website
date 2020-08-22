@@ -1,9 +1,9 @@
 import React from 'react';
-import { LogoContainer, LogoSvg, LogoText } from './logo-style'
+import { LogoContainer, LogoSvg, LogoText } from './nav-logo-style'
 import { Link } from 'react-router-dom';
 
 /* Contains an SVG logo made of text*/
-class Logo extends React.Component {
+class NavLogo extends React.Component {
 
     render() {
         return (
@@ -25,4 +25,4 @@ class Logo extends React.Component {
     }
 }
 
-export default Logo;
+export default NavLogo;

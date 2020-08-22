@@ -1,6 +1,6 @@
 import React from "react";
-import {SlideshowContainer, CircleContainer, Circle, SlideArrow, SlideImage} from "./slide-show-style"
-
+import {SlideshowContainer, CircleContainer, Circle, SlideArrow, SlideImage, SlideOverlay} from "./slide-show-style"
+import Logo from "../logo/logo.jsx"
 /**
  * Emir Sahin
  * 7/21/2020
@@ -23,6 +23,7 @@ class SlideShow extends React.Component {
         return (
             <SlideshowContainer>
                 <SlideImage opacity={this.state.imageOpacity} src={this.images[this.state.imageIndex]} />
+                <SlideOverlay><span>Lorem Ipsum</span></SlideOverlay>
                 <CircleContainer>
                 {Array(this.numOfImages).fill().map( (element, index) => 
                 <Circle onClick={() => this.switchImage(null, index)} style={this.setActiveCircle(index)} key={index}></Circle>)}

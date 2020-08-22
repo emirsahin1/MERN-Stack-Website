@@ -1,7 +1,7 @@
 import styled, { css } from "styled-components"
 import {device} from "../../device-sizes"
 
-/**Text container, used with a p tag and h header tag containing text inside. */
+/**Text container, used with a p tag and optional h header tag containing text inside. */
 export const TextContainer = styled.div`
 
     margin: 50px auto 10px auto;
@@ -12,16 +12,15 @@ export const TextContainer = styled.div`
     text-align:center;
     border-radius: 30px;
     
-
     & p{
         color: #ffffff;
         padding: calc(2% + 5px) 4%;
         font-family: 'Raleway', sans-serif;
-        font-size: 25px;
+        font-size: 22px;
         line-height:30px;
     }
     
-    /* Style for the headers */
+    /* Style for the headers in text */
     &>*{
         color: #ffffff;
         text-shadow: 0 0 20px black;
@@ -37,9 +36,11 @@ export const TextContainer = styled.div`
         text-decoration:none;
     }
 
+    /*Highlighted text*/
     & span{
         color: #c0ffb8;
     }
+
     /**If animated, the initial styles are set. */
     ${props => {
         if (props.animated) {
@@ -57,21 +58,22 @@ export const TextContainer = styled.div`
     }}
 
     @media ${device.mobile}{
-        & p{
-        font-size:${props => props.mobileFontSize ? `min(max(${props.mobileFontSize}, 5vw), 25px)` : "min(5vw, 20px)"};
-        padding: 5%;
-        }
         border-radius: 20px;
         width:80%;
         margin-top: 10px;
         margin-bottom: 10px;
+        
+        & p{
+            font-size:${props => props.mobileFontSize ? `min(max(${props.mobileFontSize}, 5vw), 25px)` : "min(5vw, 20px)"};
+            padding: 5%;
+        }
     }
 `
 
 
 
 
-/**Light version of the textContainer */
+/**Light version of the textContainer, used with a p tag and optional h header tag containing text inside.  */
 export const LightTextContainer = styled(TextContainer)`
 
     background-color:#00000082;
@@ -89,25 +91,23 @@ export const LightTextContainer = styled(TextContainer)`
         padding: calc(2% + 5px) 4% 0px;
 
         @media ${device.mobile}{
-        /* padding: 5%; */
-        font-size: min(10vw, 26px);
+            font-size: min(10vw, 26px);
         } 
     }
-
+    /* Style for the hightlighted text */
     & span{
         color: #f2c231;
     }
     `
     
 
-
+/** Text for the download, used with a p tag and optional h header tag containing text inside. */
 export const DownloadText = styled(LightTextContainer)`
 
     margin-top:0;
     min-width:120px;
     border-radius: 0px;
     border-style: none;
-    margin-bottom: 70px;
     width: 50vw;
     max-width: 340px;
     display:flex;
@@ -126,9 +126,6 @@ export const DownloadText = styled(LightTextContainer)`
         }
         ${props => {return props.styles}};
     }
-
     ${props => {return props.styles}};
-
-
 `
 

@@ -10,8 +10,25 @@ export const SlideImage = styled.img`
     height: auto;
     position: absolute;
     transition: all 0.25s ease-in;
-    opacity: ${props => props.opacity}
+    opacity: ${props => props.opacity};
 `
+export const SlideOverlay = styled.div`
+  position:absolute;
+
+  &>*{
+    font-size:100px;
+    color:#000000;
+    opacity:0.4;
+    text-shadow: 0px 0px 35px #ffffff, 0px 0px 35px #5c5c5c29;
+  }
+
+  @media ${device.mobile} {
+    &>*{
+      font-size:12vw;
+    }
+  }
+`
+
 export const SlideshowContainer = styled.div`
     display: flex;
     position: relative;
