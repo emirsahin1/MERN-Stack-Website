@@ -10,7 +10,7 @@ export const TextContainer = styled.div`
     height: auto;
     background-color:#1d1d1d;
     text-align:center;
-    border-radius: 30px;
+    /* border-radius: 30px; */
     
     & p{
         color: #ffffff;
@@ -59,7 +59,7 @@ export const TextContainer = styled.div`
     }}
 
     @media ${device.mobile}{
-        border-radius: 20px;
+        /* border-radius: 20px; */
         width:80%;
         margin-top: 10px;
         margin-bottom: 10px;
@@ -130,11 +130,27 @@ export const DownloadText = styled(LightTextContainer)`
     ${props => {return props.styles}};
 `
 
+export const TransparentTextContainer = styled(TextContainer)`
+
+    background-color:#00000030;
+    border-radius: 0;
+
+
+
+
+    & p{
+        color: #ffffff;
+        text-shadow: 0px 0px 15px black;
+        box-shadow: 0px 0px 90px 30px #ffffff3b;
+    }
+
+`
+
+
+
+
 export const LargeLightTextContainer = styled(LightTextContainer)`
 
     width:85%;
-
-
-
 
 `
