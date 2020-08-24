@@ -141,7 +141,7 @@ export const TransparentTextContainer = styled(TextContainer)`
     & p{
         color: #ffffff;
         text-shadow: 0px 0px 15px black;
-        box-shadow: 0px 0px 90px 30px #ffffff3b;
+        box-shadow: 0px 0px 90px 5px #ffffff3b;
     }
 
 `
