@@ -4,6 +4,7 @@ import { TransparentDivider, FlexBox } from "../../utility-styles/utility-styles
 import { RectangleButton } from "../../button/button-style"
 
 export default class DownloadPage extends Component {
+
     render() {
         return (
             <div>
@@ -15,9 +16,7 @@ export default class DownloadPage extends Component {
                        <br/><br/>For Ios (Apple) mobile devices, our app is currently not <span>supported</span>. </p>
                 </LightTextContainer>
                 <FlexBox direction="column;">
-                    <form method="get" action="../../../images/slide1.jpg">
-                    <RectangleButton type="submit"><p>Download</p></RectangleButton>
-                    </form>
+                    <RectangleButton type="submit" onClick={this.downloadApp}><p>Download</p></RectangleButton>
                     <DownloadText><p>Version 0.1</p></DownloadText>
                 </FlexBox>
                 <TextContainer>
@@ -27,5 +26,9 @@ export default class DownloadPage extends Component {
                 <TransparentDivider height="200px" />
             </div>
         )
+    }
+
+    downloadApp(){
+        window.location.href = "/api/download-app";
     }
 }
