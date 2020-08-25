@@ -1,6 +1,6 @@
 const express = require('express')
 const app = express()
-const port = 5000
+const PORT = process.env.PORT || 3000;
 const path = require('path');
 const fs = require('fs');
 
@@ -19,6 +19,6 @@ app.get('*', (req,res) => {
     res.sendFile(path.join(__dirname, "./client/build/index.html"));
 })
 
-app.listen(port, () => {
-  console.log(`Example app listening at http://localhost:${port}`)
+app.listen(PORT, () => {
+  console.log(`Example app listening at http://localhost:${PORT}`)
 })
