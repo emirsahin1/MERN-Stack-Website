@@ -4,12 +4,14 @@
   "description": "",
   "main": "app.js",
   "dependencies": {
+    "dotenv": "^8.2.0",
     "express": "^4.17.1",
-    "helmet": "^4.1.0"
+    "helmet": "^4.1.0",
+    "mongoose": "^5.10.1"
   },
   "devDependencies": {},
   "scripts": {
-    "start": "node app.js",
+    "start": "node server.js",
     "heroku-postbuild": "cd client && npm install && npm run build"
   },
   "author": "",

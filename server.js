@@ -1,27 +1,31 @@
 const express = require('express')
-const app = express()
+const server = express()
+const mongoose = require('mongoose')
 const PORT = process.env.PORT || 3000;
 const path = require('path');
 const fs = require('fs');
 const helmet = require('helmet')
-
+require("dotenv/config");
 
 const downloadPath = path.join(__dirname + "/download-file");
 
 const downloadFile = fs.readdirSync(downloadPath)
 
-app.use(helmet());
-app.use(express.static(path.join(__dirname, "./client/build")));
+server.use(helmet());
+server.use(express.static(path.join(__dirname, "./client/build")));
 
-app.get('/api/download-app', (req,res) => {
+mongoose.connect(process.env.DB_CONNECTION_STRING);
+
+
+server.get('/api/download-app', (req,res) => {
 
     res.download(path.join(downloadPath, downloadFile[0]));
 })
 
-app.get('*', (req,res) => {
+server.get('*', (req,res) => {
     res.sendFile(path.join(__dirname, "./client/build/index.html"));
 })
 
-app.listen(PORT, () => {
+server.listen(PORT, () => {
   console.log(`Example app listening at http://localhost:${PORT}`)
 })

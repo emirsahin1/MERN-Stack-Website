@@ -9,22 +9,23 @@ export const SlideImage = styled.img`
     width: 100%;
     height: auto;
     position: absolute;
-    transition: all 0.25s ease-in;
+    transition: all 0.250s linear;
+    -webkit-transition: all 0.250s linear;
     opacity: ${props => props.opacity};
 `
 export const SlideOverlay = styled.div`
   position:absolute;
 
   &>*{
-    font-size:100px;
-    color:#000000;
-    opacity:0.4;
+    font-size:80px;
+    color:#f3dcf9;
+    opacity:1;
     text-shadow: 0px 0px 35px #ffffff, 0px 0px 35px #5c5c5c29;
   }
 
   @media ${device.mobile} {
     &>*{
-      font-size:12vw;
+      font-size:9vw;
     }
   }
 `

@@ -23,7 +23,7 @@ class SlideShow extends React.Component {
         return (
             <SlideshowContainer>
                 <SlideImage opacity={this.state.imageOpacity} src={this.images[this.state.imageIndex]} />
-                {/* <SlideOverlay><span>Lorem Ipsum</span></SlideOverlay> */}
+                {/* <SlideOverlay><span>Museum of Lighting</span></SlideOverlay> */}
                 <CircleContainer>
                 {Array(this.numOfImages).fill().map( (element, index) => 
                 <Circle onClick={() => this.switchImage(null, index)} style={this.setActiveCircle(index)} key={index}></Circle>)}
@@ -58,7 +58,7 @@ class SlideShow extends React.Component {
 
     componentDidMount(){
         //The interval for timing image switch. 
-        this.interval = setInterval(() => this.switchImage(1), this.switchDelay);
+        this.interval = setInterval(function(){this.switchImage(1)}.bind(this), this.switchDelay);
     }
 
     componentWillUnmount(){
@@ -110,12 +110,15 @@ class SlideShow extends React.Component {
                 newImageIndex += this.numOfImages;
             }
         }
-        this.setState(this.setState(prevState => ({imageOpacity: 0})), () => {
-        
-        setTimeout(() => {this.setState(prevState => ({imageIndex: newImageIndex, imageOpacity: 1}))}, 250)} );
 
-        this.interval = setInterval(() => this.switchImage(1, undefined), 5000);
+        this.setState(prevState => ({imageOpacity: 0}), function(){
+
+        setTimeout((function(){this.setState(prevState => ({imageIndex: newImageIndex, imageOpacity: 1}))}.bind(this)), 250);
+    }.bind(this));
+
+        this.interval = setInterval(function(){this.switchImage(1, undefined)}.bind(this), 5000);
     }
 }
 export default SlideShow; 
 
+//TODO Safari bug still not fixed
