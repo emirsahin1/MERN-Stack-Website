@@ -7,23 +7,52 @@ const fs = require('fs');
 const helmet = require('helmet')
 require("dotenv/config");
 
+const EmailSubscriber = require('./models/email-subscriber')
 const downloadPath = path.join(__dirname + "/download-file");
+const downloadFile = fs.readdirSync(downloadPath);
 
-const downloadFile = fs.readdirSync(downloadPath)
-
+server.use(express.json());
 server.use(helmet());
 server.use(express.static(path.join(__dirname, "./client/build")));
 
-mongoose.connect(process.env.DB_CONNECTION_STRING);
+
+mongoose.connect(process.env.DB_CONNECTION_STRING, {useUnifiedTopology: true, useNewUrlParser: true},
+  error => {
+          if(error){
+            console.log("Connection Failed " + error);}
+            else(console.log("Connected"))})
+  
+  
+
+//Post request for newsletter
+server.post('/api/subscribe', async (req,res) => {
+  
+  try{
+    const newSub = new EmailSubscriber(req.body);
+    await newSub.save();
+    res.send("Email subscribed" + newSub);
+  }
+
+  catch(err){
+    res.send("Failed");
+  }
+})
+
+
+
+
+
+
+
 
 
 server.get('/api/download-app', (req,res) => {
-
-    res.download(path.join(downloadPath, downloadFile[0]));
+  
+  res.download(path.join(downloadPath, downloadFile[0]));
 })
 
 server.get('*', (req,res) => {
-    res.sendFile(path.join(__dirname, "./client/build/index.html"));
+  res.sendFile(path.join(__dirname, "./client/build/index.html"));
 })
 
 server.listen(PORT, () => {

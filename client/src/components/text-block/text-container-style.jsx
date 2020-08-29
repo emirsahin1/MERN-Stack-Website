@@ -68,7 +68,9 @@ export const TextContainer = styled.div`
             font-size:${props => props.mobileFontSize ? `min(max(${props.mobileFontSize}, 5vw), 25px)` : "min(5vw, 20px)"};
             padding: 5%;
         }
+        ${props => {return props.styles}}; 
     }
+    ${props => {return props.styles}};
 `
 
 
@@ -120,14 +122,26 @@ export const DownloadText = styled(LightTextContainer)`
         border-style: none;
         margin-top:0px;
         margin-bottom: 40px;
-        width: 50vw;
-        
+        width:50vw;
         & p{
             font-size: max(20px,4vw);
         }
         ${props => {return props.styles}};
     }
     ${props => {return props.styles}};
+`
+
+export const EmailText = styled(DownloadText)`
+    max-width: 680px;
+    min-width: 680px;
+    margin:0;
+    @media ${device.mobile}{
+        max-width: 680px;
+        min-width: 240px;
+        width:100%;
+    }
+
+
 `
 
 export const TransparentTextContainer = styled(TextContainer)`

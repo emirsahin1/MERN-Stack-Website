@@ -76,5 +76,18 @@ export const RectangleButton = styled(RoundButton)`
     ${props => {return props.styles}}
 `
 
+export const SubmitButton = styled(RectangleButton)`
 
+    min-width:120px;
+    width:100%;
+    max-width:340px;
+    height:50px;
+    margin:0px;
+    font-size:24px;
+    color: #c0ffb8;
+
+    @media ${device.mobile}{
+        margin:0px;
+    }
+`
 
