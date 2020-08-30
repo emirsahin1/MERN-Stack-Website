@@ -1,6 +1,7 @@
 import React from 'react'
 import SlideShow from "../../slide-show/slide-show"
 import ImageBlock from "../../image-block/image-block"
+import NewsLetterForm from "../../newsletter-form/newsletter-form"
 import { RoundButton, RectangleButton, SubmitButton } from "../../button/button-style"
 import { TextContainer, LightTextContainer, DownloadText, EmailText } from "../../text-block/text-container-style"
 import { Divider, TransparentDivider, FlexBox } from "../../utility-styles/utility-styles"
@@ -12,12 +13,10 @@ import { TextInput } from "../../input/input-style"
 
 export default class Home extends React.Component {
 
-
     constructor(props) {
         super(props)
         this.emailInput = React.createRef();
     }
-
 
     render() {
         return (
@@ -35,13 +34,7 @@ export default class Home extends React.Component {
                     <DownloadText styles="margin:0; height:80px"><p>Version 0.1</p></DownloadText>
                 </FlexBox>
 
-                <FlexBox direction="column" horizontal="center" styles="margin: 50px 40px 5px;">
-                    <EmailText styles="margin:0; height:80px;"><p>Join our email newsletter!</p></EmailText>
-                    <FlexBox direction="row" horizontal="center" styles="margin: 10px 40px 40px; width:100%;">
-                        <TextInput placeholder="Email Address" type="email" ref={this.emailInput}></TextInput>
-                        <SubmitButton onClick={this.subscribeEmail.bind(this)}>Submit</SubmitButton>
-                    </FlexBox>
-                </FlexBox>
+                <NewsLetterForm/>
 
                 <LightTextContainer styles="margin-top:0px;">
                     <p>
@@ -64,28 +57,6 @@ export default class Home extends React.Component {
         );
 
     }
-
-    subscribeEmail() {
-
-        console.log(this.emailInput.current.value)
-        const requestOptions = {
-            method: 'POST',
-            body: JSON.stringify({ email: this.emailInput.current.value }),
-            headers: {
-                'Content-Type': 'application/json'
-            }
-        };
-        fetch('/api/subscribe', requestOptions).then(() => window.location = "/");
-    }
-
 }
-
-
-
-
-
-
-
-
 
 //TODO MAKE EMAIL A COMPONENET, MAKE INPUT VALIDATION, 

@@ -111,7 +111,7 @@ class SlideShow extends React.Component {
             }
         }
 
-        this.setState(prevState => ({imageOpacity: 0}), function(){
+        this.setState({imageOpacity: 0}, function(){
 
         setTimeout((function(){this.setState(prevState => ({imageIndex: newImageIndex, imageOpacity: 1}))}.bind(this)), 250);
     }.bind(this));

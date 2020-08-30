@@ -33,3 +33,18 @@ export const FlexBox = styled.div`
 
     ${props => {return props.styles}};
 `
+
+
+export const ErrorMessage = styled.div`
+    align-self:flex-start;
+    background-color:red;
+    /* transform:translate(-200px, 40px); */
+`
+
+export const ErrorContainer = styled.div`
+
+    margin-right:auto;
+
+
+
+`
