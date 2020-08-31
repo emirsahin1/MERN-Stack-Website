@@ -80,8 +80,8 @@ export const SubmitButton = styled(RectangleButton)`
 
     min-width:120px;
     width:100%;
-    max-width:340px;
     height:50px;
+    max-width:100%;
     margin:0px;
     font-size:24px;
     color: #c0ffb8;

@@ -27,11 +27,11 @@ export default class Home extends React.Component {
                     <p>Lorem Blimpsum Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                 </TextContainer>
 
-                <FlexBox direction="row" horizontal="center" styles="margin: 40px 40px 40px;">
-                    <RectangleButton to="/Download" styles="margin:0;">
+                <FlexBox direction="row" horizontal="center" styles="margin: 40px auto 40px; width:85vw; min-width:240px; max-width:680px;">
+                    <RectangleButton to="/Download" styles="margin:0; width: 100%;">
                         <p>Download</p>
                     </RectangleButton>
-                    <DownloadText styles="margin:0; height:80px"><p>Version 0.1</p></DownloadText>
+                    <DownloadText styles="margin:0; height:80px; width: 100%;"><p>Version 0.1</p></DownloadText>
                 </FlexBox>
 
                 <NewsLetterForm/>

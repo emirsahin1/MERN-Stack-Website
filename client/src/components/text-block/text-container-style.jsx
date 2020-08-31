@@ -131,17 +131,15 @@ export const DownloadText = styled(LightTextContainer)`
     ${props => {return props.styles}};
 `
 
-export const EmailText = styled(DownloadText)`
-    max-width: 680px;
-    min-width: 680px;
+export const EmailText = styled(LightTextContainer)`
     margin:0;
+    width:100%;
     @media ${device.mobile}{
-        max-width: 680px;
-        min-width: 240px;
         width:100%;
+        & p{
+            font-size: max(20px,4vw);
+        }
     }
-
-
 `
 
 export const TransparentTextContainer = styled(TextContainer)`
