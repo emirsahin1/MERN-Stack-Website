@@ -48,7 +48,7 @@ export const AlertMessage = styled.div`
     transform:${props => props.display ==="true" ? "translatey(68px)" : "translatey(40px)"};
     margin:0px;
     opacity:${props => props.display ==="true" ? 1 : 0};
-    transition: opacity 0.5s ease-in, transform 0.3s ease-in;
+    transition: opacity 0.5s ease-in, transform 0.3s ease-in, background-color 0.2s ease-in;
 
     ${props => {if(props.emailValid){return css`background-color:#8af47ca6`
     }}}

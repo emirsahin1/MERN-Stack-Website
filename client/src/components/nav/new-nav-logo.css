@@ -1,0 +1,35 @@
+.cls-1,
+            
+            .cls-5 {
+                fill: #a95bbd;
+            }
+
+            .cls-2 {
+                fill: #636cc0;
+            }
+
+            .cls-3 {
+                font-size: 14px;
+                letter-spacing: -0.03em;
+                fill: #ffffff;
+            }
+
+            .cls-3,
+            .cls-4,
+            .cls-5 {
+                /* font-family: Tahoma-Bold, Tahoma; */
+                font-family: Raleway, sans-serif;
+                font-weight: 700;
+                fill: #ffffff;
+            }
+
+            .cls-4 {
+                font-size: 12px;
+                fill: #fff;
+                letter-spacing: -0.02em;
+            }
+
+            .cls-5 {
+                font-size: 10px;
+                letter-spacing: -0.03em;
+            }

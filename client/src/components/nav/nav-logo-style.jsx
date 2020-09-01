@@ -4,8 +4,13 @@ import {device} from "../../device-sizes"
 export const LogoContainer = styled.div`
     font-family: 'Raleway', sans-serif;
     position: absolute;
-    left: 20px;
-    margin-left: 8%;
+    left: 2vw;
+    margin-left:max(calc(5vw - 30px), 4px);
+    margin-right:50px;
+    display:flex;
+    flex-direction:row;
+    justify-content:center;
+    align-items:center;
 
     @media ${device.mobile}{
 
@@ -18,8 +23,11 @@ export const LogoContainer = styled.div`
 export const LogoSvg = styled.svg`
 
     display: block;
-    width: 100px;
-    height: 50px;
+    width: 40px;
+    transition: all 0.15s ease-in;
+    &:hover{
+        transform:scale(1.3);
+    }
 `
 
 export const LogoText = styled.text`
@@ -31,4 +39,10 @@ export const LogoText = styled.text`
     ${LogoContainer}:hover &{
         font-size: 25px;
     }
+`
+
+export const LogoTextSVG = styled.svg`
+
+margin-left:max(calc(10vw - 140px), 4px);
+pointer-events:none;
 `

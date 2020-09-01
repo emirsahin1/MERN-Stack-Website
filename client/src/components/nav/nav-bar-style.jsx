@@ -37,6 +37,7 @@ export const NavContaier = styled.nav`
     z-index:12;
     align-items: center;
     justify-content: center;
+    /* background-color: #6d4063; */
     background-color: rgb(29, 29, 29);
 
     @media ${device.mobile}{
