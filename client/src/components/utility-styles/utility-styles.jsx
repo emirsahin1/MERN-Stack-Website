@@ -40,6 +40,7 @@ export const AlertMessage = styled.div`
     width:85vw;
     min-width: 240px;
     max-width: 680px;
+    max-height:47px;
     background-color:#b3000085;
     color:#ffffff;
     padding:10px;

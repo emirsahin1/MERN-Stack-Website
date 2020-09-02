@@ -16,7 +16,7 @@ server.use(helmet());
 server.use(express.static(path.join(__dirname, "./client/build")));
 
 
-mongoose.connect(process.env.DB_CONNECTION_STRING, {useUnifiedTopology: true, useNewUrlParser: true},
+mongoose.connect(process.env.DB_CONNECTION_URL, {useUnifiedTopology: true, useNewUrlParser: true},
   error => {
           if(error){
             console.log("Connection Failed " + error);}
@@ -26,24 +26,19 @@ mongoose.connect(process.env.DB_CONNECTION_STRING, {useUnifiedTopology: true, us
 
 //Post request for newsletter
 server.post('/api/subscribe', async (req,res) => {
-  
+  if(validateEmail(req.body.email)){
   try{
     const newSub = new EmailSubscriber(req.body);
     await newSub.save();
-    res.send("Email subscribed" + newSub);
+    res.status(200).send("You have subscribed to our newsletter!");
   }
 
   catch(err){
-    res.send("Failed");
+    res.status(400).send("Server Failure");
   }
+}
+  else(res.status(400).send("Please enter a valid email address!"))
 })
-
-
-
-
-
-
-
 
 
 server.get('/api/download-app', (req,res) => {
@@ -58,3 +53,10 @@ server.get('*', (req,res) => {
 server.listen(PORT, () => {
   console.log(`Example app listening at http://localhost:${PORT}`)
 })
+
+
+/**Checks to see if email fits pattern email.adc.abc*/
+function validateEmail(email) {
+  let re = /\S+@\S+\.\S+/;
+  return re.test(email);
+}

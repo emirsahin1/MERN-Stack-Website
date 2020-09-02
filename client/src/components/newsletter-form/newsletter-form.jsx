@@ -40,7 +40,7 @@ export default class NewsLetterForm extends Component {
                 headers: { 'Content-Type': 'application/json' }
             };
             //Displays an alery after succesfull subscription
-            fetch('/api/subscribe', requestOptions).then(() => this.setState({displayAlert:"true", messageContent: "You have subscribed to our newsletter!", emailValid:true}));
+            fetch('/api/subscribe', requestOptions).then((res) => {return res.text()}).then((resText) => this.setState({displayAlert:"true", messageContent: resText, emailValid:true}));
 
         }
         else {
@@ -54,3 +54,4 @@ export default class NewsLetterForm extends Component {
         return re.test(email);
     }
 }
+//"You have subscribed to our newsletter!"
