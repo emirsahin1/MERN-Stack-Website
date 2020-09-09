@@ -1,5 +1,6 @@
 import styled, { css, keyframes } from 'styled-components';
 import {device} from "../../device-sizes"
+import {Link} from "react-router-dom";
 
 const variables = {
     navBarHeight: "60px"
@@ -37,9 +38,11 @@ export const NavContaier = styled.nav`
     z-index:12;
     align-items: center;
     justify-content: center;
-    /* background-color: #6d4063; */
     background-color: rgb(29, 29, 29);
 
+    @media ${device.tablet}{
+        justify-content:flex-end;
+    }
     @media ${device.mobile}{
         border-radius: 0;
         justify-content: space-between;
@@ -52,27 +55,22 @@ export const NavPlaceHolder = styled.div`
 
 export const NavLinksContainer = styled.ul`
     display: flex;
-    width: 45vw;
-    /*This margin is used to center the nav perfectly*/
-    margin-left: 36px;
+    width: 450px;
     justify-content: space-evenly;
     align-items: center;
-
-    & a{
-        display: block;
-        text-decoration: none;
-        color: white;
-        padding-top: 20.5px;
-        padding-bottom: 20.5px;
-    } 
 
     ${props => {
         if(props.isNavAnimActive){
             return css `transition: transform 0.5s ease-in;`}
         }
     }
-
+    @media ${device.tablet}{
+        margin-right:50px;
+        width:410px;
+    }
     @media ${device.mobile}{
+        width: 45vw;
+        margin-right:0;
         position: absolute;
         display: flex;
         flex-direction: column;
@@ -81,17 +79,12 @@ export const NavLinksContainer = styled.ul`
         border-bottom-left-radius: 60px;
         right: 0px;
         top: 60px;
-        height: 30vh;
-        min-height: 240px;
+        height: 400px;
         min-width: 170px;
         transform: translateX(100%);
         background-color: rgb(51, 51, 51);
         z-index: 10;
-
-        & a{
-            display: inline;
-        }
-
+        
         ${props => {
         if(props.isMobileNavActive){
             return css `transform: translateX(0%);`}
@@ -103,27 +96,36 @@ export const NavLinksContainer = styled.ul`
     }
     `
 
-export const NavLink = styled.li`
+export const NavLink = styled(Link)`
+    display: block;
+    text-decoration: none;
+    color: white;
     list-style-type: none;
-    padding: 0px 6px;
-    margin: 0 10px;
+    padding: 20.5px 6px;
+    margin: 0 30px;
     transition: border-color 0.15s ease-in, background-color 0.15s ease-in;
-
+    text-align:center;
+    
     &:hover{
         background-color: var(--hover-color);
         border-color: var(--hover-color);
     }
 
+    @media ${device.tablet}{
+        margin: 0 3px;
+    }
+
     @media ${device.mobile}{
-        border-radius: 60px;
-        border-width: 13px;
-        border-style: solid;
-        padding: 0px 10px;
+        border-radius: 5px;
+        /* border-width: 13px;
+        border-style: solid; */
+        padding: 15px 30px;
+        width:100%;
         margin-top: 15px;
         margin-right: 0px;
         margin-bottom: 10px;
-        background-color: rgb(29, 29, 29);
-        border-color: rgb(29, 29, 29);
+        background-color: #00000042;
+        border-color: #00000000;
         opacity: 0;
 
         ${props => {
@@ -133,21 +135,25 @@ export const NavLink = styled.li`
             return css`animation: ${navLinkFadeBack} 0.5s ease forwards ${-props.index / 7 + 0.3}s; opacity: 1;`}
         }} 
     }
+
+    ${props => {return props.styles}}
 `
 
 
 export const NavLine = styled.div`
-    width: 80%;
+    min-width: 10px;
+    width:100%;
     border-style: solid;
     border-width: thin;
     border-radius: 100px;
     border-color: var(--circle-color);
+    display:none;
 `
 
 export const Circle = styled.div`
     position: relative;
-    width: 9px;
-    height: 9px;
+    width: 5px;
+    height: 5px;
     border-radius: 50%;
     background-color: var(--circle-color);
     transition: all 0.15s ease-in;
@@ -162,7 +168,8 @@ export const Circle = styled.div`
 
     @media ${device.mobile}{
         display: none;
-    }`
+    }
+`
 
 
 export const Burger = styled.div`

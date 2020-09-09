@@ -19,10 +19,6 @@ class Navlinks extends React.Component {
             l1Hovering: false,
             l2Hovering: false
         }
-        this.navToggles = this.makeToggleClasses("nav-active", "nav-animation");
-        this.glowToggle = this.makeToggleClasses("circle-glow");
-        this.burgerToggles = this.makeToggleClasses("toggle");
-        this.circleGlow.bind(this);
     }
 
     render() {
@@ -30,28 +26,44 @@ class Navlinks extends React.Component {
         return (
                 <div>
                     <NavLinksContainer isMobileNavActive={this.state.isMobileNavActive} isNavAnimActive={this.state.isNavAnimActive}>
-                        <NavLink isLinkAnimActive={this.state.isLinkAnimActive} index="0" onMouseEnter={() => this.circleGlow("l0Hovering", true)}
-                            onMouseLeave={() => this.circleGlow("l0Hovering", false)}>
-                            <Link to="/" onClick={this.burgerClick.bind(this)}>Home</Link>
+
+                        {/* <NavLink isLinkAnimActive={this.state.isLinkAnimActive} index="1">
+                            <Link to="/Download" onClick={this.burgerClick.bind(this)}>Education</Link>
+                        </NavLink> */}
+                        <NavLink to="/Download" onClick={this.burgerClick.bind(this)}>
+                        <li isLinkAnimActive={this.state.isLinkAnimActive} index="1">Education</li>
                         </NavLink>
 
+                        <NavLine className="nav-line"></NavLine>
                         <div><Circle isHovering={this.state.l0Hovering}></Circle></div>
-                        <NavLine className="nav-line"></NavLine>
-                        <div><Circle isHovering={this.state.l1Hovering}></Circle></div>
 
-                        <NavLink isLinkAnimActive={this.state.isLinkAnimActive} index="1" onMouseEnter={() => this.circleGlow("l1Hovering", true)}
-                            onMouseLeave={() => this.circleGlow("l1Hovering", false)}>
-                            <Link to="/Download" onClick={this.burgerClick.bind(this)}>Download</Link>
+                        <NavLink to="/Download" onClick={this.burgerClick.bind(this)}>
+                        <li isLinkAnimActive={this.state.isLinkAnimActive} index="1">Design</li>
                         </NavLink>
 
-                        <div><Circle isHovering={this.state.l1Hovering}></Circle></div>
                         <NavLine className="nav-line"></NavLine>
-                        <div><Circle isHovering={this.state.l2Hovering}></Circle></div>
+                        <div><Circle isHovering={this.state.l0Hovering}></Circle></div>
 
-                        <NavLink isLinkAnimActive={this.state.isLinkAnimActive} index="2" onMouseEnter={() => this.circleGlow("l2Hovering", true)}
-                            onMouseLeave={() => this.circleGlow("l2Hovering", false)}>
-                            <Link to="/Information" onClick={this.burgerClick.bind(this)}>Information</Link>
+                        <NavLink to="/Download" onClick={this.burgerClick.bind(this)}>
+                        <li isLinkAnimActive={this.state.isLinkAnimActive} index="1">Therapy</li>
                         </NavLink>
+
+                        <NavLine className="nav-line"></NavLine>
+                        <div><Circle isHovering={this.state.l0Hovering}></Circle></div>
+
+
+                        <NavLink to="/Download" onClick={this.burgerClick.bind(this)} styles="padding-right:10px; padding-left:10px;">
+                        <li isLinkAnimActive={this.state.isLinkAnimActive} index="1">Art</li>
+                        </NavLink>
+
+                        <NavLine className="nav-line"></NavLine>
+                        <div><Circle isHovering={this.state.l0Hovering}></Circle></div>
+
+
+                        <NavLink to="/Download" onClick={this.burgerClick.bind(this)}>
+                        <li isLinkAnimActive={this.state.isLinkAnimActive} index="1">Technology</li>
+                        </NavLink>
+
                     </NavLinksContainer>
 
                     <Burger isMobileNavActive={this.state.isMobileNavActive} onClick={this.burgerClick.bind(this)}>
@@ -69,16 +81,6 @@ class Navlinks extends React.Component {
                 isBurgerAnimActive: !prevState.isBurgerAnimActive  }),)
         }
         )
-    }
-
-    /**  If the paramater toggles are true in the inner function, returns the added strings inside toggleClasses.
-     * @param toggleClasses : The strings or classes that need to be toggled.
-     * @param toggles : Boolean value resposnsible for the toggling. 
-    */
-    makeToggleClasses(...toggleClasses) {
-        return (...toggles) => {
-            return toggleClasses.map((c, i) => toggles[i] ? ` ${c}` : '').join('');
-        }
     }
 
     /**
@@ -107,16 +109,6 @@ class Navlinks extends React.Component {
             return { animation: `navLinkFadeForward 0.5s ease forwards ${index / 7 + 0.3}s` };
         }
     }
-
-    /**
-     * 
-     * @param {string} hoverState : The string name of the elements state.
-     * @param {boolean} value : Boolean value resposnsible for the toggling.
-     */
-    circleGlow(hoverState, value) {
-        this.setState(prevState => ({ [hoverState]: value }))
-    }
-
 }
 export default Navlinks;
 

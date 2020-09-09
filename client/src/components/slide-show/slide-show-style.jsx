@@ -83,6 +83,12 @@ export const SlideArrow = styled.svg`
   opacity: 0.3;
   cursor: pointer;
   transition: all 0.14s ease-in;
+
+
+  & path{
+    pointer-events:none;
+  }
+
   /**Puts the arrow to the left if assing left*/
   ${props => {if(props.left){
         return css`
