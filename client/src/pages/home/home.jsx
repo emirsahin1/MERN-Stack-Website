@@ -6,6 +6,7 @@ import { RoundButton, RectangleButton, SubmitButton } from "../../components/but
 import { TextContainer, LightTextContainer, DownloadText, EmailText } from "../../components/text-block/text-container-style"
 import { Divider, TransparentDivider, FlexBox } from "../../components/utility-styles/utility-styles"
 import { TextInput } from "../../components/input/input-style"
+import {InfoCard} from "../../components/info-card/info-card"
 
 /**
  * Home page
@@ -23,10 +24,12 @@ export default class Home extends React.Component {
             <div>
                 <SlideShow />
                 <Divider />
-                <FlexBox>
-                <TextContainer mobileFontSize="14px" styles="height:300px;">
-                    <p>Lorem Blimpsum Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                </TextContainer>
+                <FlexBox horizontal="space-between">
+                <InfoCard></InfoCard>
+                <InfoCard></InfoCard>
+                <InfoCard></InfoCard>
+                <InfoCard></InfoCard>
+                <InfoCard></InfoCard>
                 </FlexBox>
 
                 <TextContainer mobileFontSize="14px">
@@ -66,3 +69,4 @@ export default class Home extends React.Component {
 }
 
 //TODO MAKE EMAIL A COMPONENET, MAKE INPUT VALIDATION, 
+//TODO: Move styles to a seperate folder
