@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
-import { DownloadText, LightTextContainer, TextContainer } from "../../text-block/text-container-style"
-import { TransparentDivider, FlexBox } from "../../utility-styles/utility-styles"
-import { RectangleButton } from "../../button/button-style"
+import { DownloadText, LightTextContainer, TextContainer } from "../../components/text-block/text-container-style"
+import { TransparentDivider, FlexBox } from "../../components/utility-styles/utility-styles"
+import { RectangleButton } from "../../components/button/button-style"
 
 export default class DownloadPage extends Component {
 

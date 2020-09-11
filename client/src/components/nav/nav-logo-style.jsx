@@ -43,6 +43,7 @@ export const LogoText = styled.text`
 
 export const LogoTextSVG = styled.svg`
 
-margin-left:max(calc(10vw - 140px), 4px);
+/* margin-left:max(calc(10vw - 140px), 4px); */
+margin-left:20px;
 pointer-events:none;
 `

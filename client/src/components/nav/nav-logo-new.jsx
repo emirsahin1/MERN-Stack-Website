@@ -17,7 +17,7 @@ export default class NewNavLogo extends React.Component {
                         <polygon className="cls-1"
                             points="0 79.31 0 0 38.87 42.36 52.82 26.66 52.82 56.56 39.37 70.76 20.93 52.08 20.93 79.31 0 79.31" />
                         <polygon className="cls-2" points="57.81 22.92 78.49 0 78.49 79.31 108.14 79.31 108.14 99.98 57.81 99.98 57.81 22.92" />
-                        <text className="cls-3" transform="translate(-0.85 90.38)">Museum</text><text class="cls-4"
+                        <text className="logo-text" transform="translate(-0.85 90.38)">Museum</text><text class="cls-4"
                             transform="translate(59.15 94.01)">Lighting</text><text class="cls-5"
                                 transform="translate(45.24 99.16)">of</text>
                     </LogoSvg>
@@ -33,7 +33,7 @@ export default class NewNavLogo extends React.Component {
                         </g>
                         <g>
                             <title>Layer 1</title>
-                            <text xmlSpace="preserve" textAnchor="start" font-family="'Raleway',sans-serif;" fontSize={11} id="svg_1" y={18} x="1.625" strokeWidth={0} stroke="#000" fill="#f3d0f6">Museum of Lighting</text>
+                            <text xmlSpace="preserve" textAnchor="start" font-family="'Raleway',sans-serif;" fontSize={11.8} id="svg_1" y={18} x="1.625" strokeWidth={0} stroke="#000" fill="#ffffff">Museum of Lighting</text>
                         </g>
                 </LogoTextSVG>
             </LogoContainer >

@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
-import { TextContainer, LightTextContainer, LargeLightTextContainer } from "../../text-block/text-container-style"
-import {TransparentDivider} from "../../utility-styles/utility-styles"
+import { TextContainer, LightTextContainer, LargeLightTextContainer } from "../../components/text-block/text-container-style"
+import {TransparentDivider} from "../../components/utility-styles/utility-styles"
 
 export default class InformationPage extends Component {
     render() {

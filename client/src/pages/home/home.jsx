@@ -1,11 +1,11 @@
 import React from 'react'
-import SlideShow from "../../slide-show/slide-show"
-import ImageBlock from "../../image-block/image-block"
-import NewsLetterForm from "../../newsletter-form/newsletter-form"
-import { RoundButton, RectangleButton, SubmitButton } from "../../button/button-style"
-import { TextContainer, LightTextContainer, DownloadText, EmailText } from "../../text-block/text-container-style"
-import { Divider, TransparentDivider, FlexBox } from "../../utility-styles/utility-styles"
-import { TextInput } from "../../input/input-style"
+import SlideShow from "../../components/slide-show/slide-show"
+import ImageBlock from "../../components/image-block/image-block"
+import NewsLetterForm from "../../components/newsletter-form/newsletter-form"
+import { RoundButton, RectangleButton, SubmitButton } from "../../components/button/button-style"
+import { TextContainer, LightTextContainer, DownloadText, EmailText } from "../../components/text-block/text-container-style"
+import { Divider, TransparentDivider, FlexBox } from "../../components/utility-styles/utility-styles"
+import { TextInput } from "../../components/input/input-style"
 
 /**
  * Home page
@@ -23,7 +23,13 @@ export default class Home extends React.Component {
             <div>
                 <SlideShow />
                 <Divider />
-                <TextContainer mobileFontSize="14px" animationProps={this.animationProps}>
+                <FlexBox>
+                <TextContainer mobileFontSize="14px" styles="height:300px;">
+                    <p>Lorem Blimpsum Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                </TextContainer>
+                </FlexBox>
+
+                <TextContainer mobileFontSize="14px">
                     <p>Lorem Blimpsum Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                 </TextContainer>
 
@@ -44,9 +50,9 @@ export default class Home extends React.Component {
                         Lorem Blimpsum Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     </p>
                 </LightTextContainer>
-                <ImageBlock side="right" image={require("../../../images/slideshow-images/slide1.jpg")} />
-                <ImageBlock side="left" image={require("../../../images/slideshow-images/slide3.jpg")} />
-                <ImageBlock side="right" image={require("../../../images/slideshow-images/Slide4.jpg")} />
+                <ImageBlock side="right" image={require("../../images/slideshow-images/slide1.jpg")} />
+                <ImageBlock side="left" image={require("../../images/slideshow-images/slide3.jpg")} />
+                <ImageBlock side="right" image={require("../../images/slideshow-images/Slide4.jpg")} />
                 <TransparentDivider height="50px"></TransparentDivider>
                 <LightTextContainer>
                     <p>Lorem Blimpsum Lorem ipsum dolor sit amet consectetur adipisicing elit.
