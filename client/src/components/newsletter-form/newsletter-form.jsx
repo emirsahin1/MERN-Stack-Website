@@ -19,9 +19,9 @@ export default class NewsLetterForm extends Component {
 
     render() {
         return (
-            <FlexBox direction="column" horizontal="center" styles="margin: 10px auto 40px; width:85vw; min-width:240px; max-width:680px;">
+            <FlexBox direction="column" horizontal="center" styles="margin: 40px auto 40px; width:85vw; min-width:240px; max-width:680px;">
                 <EmailText styles="margin:0; height:80px;"><p>Join our email newsletter!</p></EmailText>
-                <FlexBox direction="row" horizontal="center" styles="margin: 10px 40px 40px; width:85vw; max-width:680px;">
+                <FlexBox direction="row" horizontal="center" styles="margin: 10px 40px 10px; width:85vw; max-width:680px;">
                     <TextInput placeholder="Email Address" type="email" ref={this.emailInput}></TextInput>
                     <SubmitButton to="/" onClick={this.subscribeEmail.bind(this)}>Submit</SubmitButton>
                 </FlexBox>

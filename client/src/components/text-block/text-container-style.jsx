@@ -147,9 +147,6 @@ export const TransparentTextContainer = styled(TextContainer)`
     background-color:#00000030;
     border-radius: 0;
 
-
-
-
     & p{
         color: #ffffff;
         text-shadow: 0px 0px 15px black;
@@ -157,9 +154,6 @@ export const TransparentTextContainer = styled(TextContainer)`
     }
 
 `
-
-
-
 
 export const LargeLightTextContainer = styled(LightTextContainer)`
 
