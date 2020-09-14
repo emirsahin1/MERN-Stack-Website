@@ -7,6 +7,7 @@ import { TextContainer, LightTextContainer, DownloadText, EmailText } from "../.
 import { Divider, TransparentDivider, FlexBox } from "../../components/utility-styles/utility-styles"
 import { TextInput } from "../../components/input/input-style"
 import { InfoCard, InforCardContainer, CardHeader } from "../../components/info-card/info-card"
+import { Link } from "react-router-dom"
 
 /**
  * Home page
@@ -27,31 +28,41 @@ export default class Home extends React.Component {
                 <SlideShow />
                 <Divider />
                 <InforCardContainer>
-                    <InfoCard>
-                        <h3>Education</h3>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
-                        <img src={this.images[0]}></img>
-                    </InfoCard>
+                    <Link to="/Education">
+                        <InfoCard>
+                            <h3>Education</h3>
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+                            <img src={this.images[0]}></img>
+                        </InfoCard>
+                    </Link>
+                    <Link to="/Design">
                     <InfoCard>
                         <h3>Design</h3>
                         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
                         <img src={this.images[2]}></img>
                     </InfoCard>
+                    </Link>
+                    <Link to="/Therapy">
                     <InfoCard>
                         <h3>Therapy</h3>
                         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
                         <img src={this.images[1]}></img>
                     </InfoCard>
+                    </Link>
+                    <Link to="/Art">
                     <InfoCard styles="@media screen and (max-width: 1320px) and (min-width: 1016px){flex-grow:0.68; max-width:500px;}">
                         <h3>Art</h3>
                         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
                         <img src={this.images[0]}></img>
                     </InfoCard>
+                    </Link>
+                    <Link to="/Technology">
                     <InfoCard styles="@media screen and (max-width: 1320px){flex-grow:0.68; max-width:500px;}">
                         <h3>Technology</h3>
                         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
                         <img src={this.images[2]}></img>
                     </InfoCard>
+                    </Link>
                 </InforCardContainer>
 
                 <LightTextContainer mobileFontSize="14px">

@@ -10,7 +10,6 @@ export const TextContainer = styled.div`
     height: auto;
     background-color:#1d1d1d;
     text-align:center;
-    /* border-radius: 30px; */
     
     & p{
         color: #ffffff;
@@ -28,6 +27,7 @@ export const TextContainer = styled.div`
         font-weight:normal;
         font-size:34px;
         padding: calc(2% + 5px) 4% 0px;
+
         @media ${device.mobile}{
         /* padding: 5%; */
         font-size: min(10vw, 26px);
@@ -40,6 +40,16 @@ export const TextContainer = styled.div`
     /*Highlighted text*/
     & span{
         color: #c0ffb8;
+    }
+
+    @media ${device.mobile}{
+        width:80%;
+     
+        & p{
+            font-size:${props => props.mobileFontSize ? `min(max(${props.mobileFontSize}, 5vw), 25px)` : "min(5vw, 20px)"};
+            padding: 5%;
+        }
+        ${props => {return props.styles}}; 
     }
 
     /**If animated, the initial styles are set. */
@@ -58,23 +68,8 @@ export const TextContainer = styled.div`
     ` }
     }}
 
-    @media ${device.mobile}{
-        /* border-radius: 20px; */
-        width:80%;
-        margin-top: 10px;
-        margin-bottom: 10px;
-        
-        & p{
-            font-size:${props => props.mobileFontSize ? `min(max(${props.mobileFontSize}, 5vw), 25px)` : "min(5vw, 20px)"};
-            padding: 5%;
-        }
-        ${props => {return props.styles}}; 
-    }
     ${props => {return props.styles}};
 `
-
-
-
 
 /**Light version of the textContainer, used with a p tag and optional h header tag containing text inside.  */
 export const LightTextContainer = styled(TextContainer)`
@@ -102,8 +97,23 @@ export const LightTextContainer = styled(TextContainer)`
         color: #f2c231;
     }
     `
-    
 
+/**Transparent version of the textContainer, used with a p tag and optional h header tag containing text inside.  */
+export const TransparentTextContainer = styled(TextContainer)`
+
+    background-color:#00000030;
+    border-radius: 0;
+
+    & p{
+        color: #ffffff;
+        text-shadow: 0px 0px 15px black;
+        box-shadow: 0px 0px 90px 5px #ffffff3b;
+    }
+
+`
+
+//Specific Text Implementations
+//////////////////////////////////////////////////////////////////////////////////////////////////
 /** Text for the download, used with a p tag and optional h header tag containing text inside. */
 export const DownloadText = styled(LightTextContainer)`
 
@@ -140,23 +150,4 @@ export const EmailText = styled(LightTextContainer)`
             font-size: max(20px,4vw);
         }
     }
-`
-
-export const TransparentTextContainer = styled(TextContainer)`
-
-    background-color:#00000030;
-    border-radius: 0;
-
-    & p{
-        color: #ffffff;
-        text-shadow: 0px 0px 15px black;
-        box-shadow: 0px 0px 90px 5px #ffffff3b;
-    }
-
-`
-
-export const LargeLightTextContainer = styled(LightTextContainer)`
-
-    width:85%;
-
 `

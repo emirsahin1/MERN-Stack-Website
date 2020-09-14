@@ -21,3 +21,10 @@ export const FooterLink = styled.li`
     list-style-type: none;
 
 `
+
+export const FooterPlaceHolder = styled.div`
+        width:100%;
+        height: 80px;
+
+
+`

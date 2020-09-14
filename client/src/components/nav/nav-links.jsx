@@ -30,33 +30,33 @@ class Navlinks extends React.Component {
                         {/* <NavLink isLinkAnimActive={this.state.isLinkAnimActive} index="1">
                             <Link to="/Download" onClick={this.burgerClick.bind(this)}>Education</Link>
                         </NavLink> */}
-                        <NavLink isLinkAnimActive={this.state.isLinkAnimActive} index="0" to="/Download" onClick={this.burgerClick.bind(this)}>
+                        <NavLink isLinkAnimActive={this.state.isLinkAnimActive} index="0" to="/Education" onClick={this.burgerClick.bind(this)}>
                         <li>Education</li>
                         </NavLink>
 
                         <div><Circle isHovering={this.state.l0Hovering}></Circle></div>
 
-                        <NavLink isLinkAnimActive={this.state.isLinkAnimActive} index="1" to="/Download" onClick={this.burgerClick.bind(this)}>
+                        <NavLink isLinkAnimActive={this.state.isLinkAnimActive} index="1" to="/Design" onClick={this.burgerClick.bind(this)}>
                         <li>Design</li>
                         </NavLink>
 
                         <div><Circle isHovering={this.state.l0Hovering}></Circle></div>
 
-                        <NavLink isLinkAnimActive={this.state.isLinkAnimActive} index="2" to="/Download" onClick={this.burgerClick.bind(this)}>
+                        <NavLink isLinkAnimActive={this.state.isLinkAnimActive} index="2" to="/Therapy" onClick={this.burgerClick.bind(this)}>
                         <li>Therapy</li>
                         </NavLink>
 
                         <div><Circle isHovering={this.state.l0Hovering}></Circle></div>
 
 
-                        <NavLink isLinkAnimActive={this.state.isLinkAnimActive} index="3" to="/Download" onClick={this.burgerClick.bind(this)} styles="padding-right:10px; padding-left:10px;">
+                        <NavLink isLinkAnimActive={this.state.isLinkAnimActive} index="3" to="/Art" onClick={this.burgerClick.bind(this)} styles="padding-right:10px; padding-left:10px;">
                         <li>Art</li>
                         </NavLink>
 
                         <div><Circle isHovering={this.state.l0Hovering}></Circle></div>
 
 
-                        <NavLink isLinkAnimActive={this.state.isLinkAnimActive} index="4" to="/Download" onClick={this.burgerClick.bind(this)}>
+                        <NavLink isLinkAnimActive={this.state.isLinkAnimActive} index="4" to="/Technology" onClick={this.burgerClick.bind(this)}>
                         <li>Technology</li>
                         </NavLink>
 

@@ -1,12 +1,12 @@
 import React, { Component } from 'react'
-import { TextContainer, LightTextContainer, LargeLightTextContainer } from "../../components/text-block/text-container-style"
+import { LightPageTextContainer, TextBackground } from "../../components/page-styles/page-styles"
 import {TransparentDivider} from "../../components/utility-styles/utility-styles"
 
 export default class InformationPage extends Component {
     render() {
         return (
             <div>
-            <LargeLightTextContainer side="left">
+            <LightPageTextContainer side="left">
                 <h3><span>Information</span></h3>
                 <p>Helo Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
                     Amet ipsum molestias ipsa possimus voluptate? Enim quasi iste, 
@@ -26,7 +26,7 @@ export default class InformationPage extends Component {
                     Amet ipsum molestias ipsa possimus voluptate? Enim quasi iste, 
                     alias rem architecto maxime! Animi doloremque mollitia, 
                     veniam totam accusantium vitae. Officia, distinctio.</p>
-            </LargeLightTextContainer>
+            </LightPageTextContainer>
             <TransparentDivider height="1000px"/>
             </div>
         )

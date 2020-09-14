@@ -5,13 +5,13 @@ import NewsLetterForm from "../../components/newsletter-form/newsletter-form"
 
 
 
-export default class EducationPage extends Component {
+export default class DesignPage extends Component {
     render() {
         return (
             <div>
                 <PageTextBlock horizontal="center;" vertical="center;" styles="width:85%; margin:0 auto; height:auto; align-items: stretch;">
                 <LightPageTextContainer>
-                    <h3>Education</h3>
+                    <h3>Design</h3>
                     <p>Education is great. Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
                         Repellat esse, libero sit exercitationem quod beatae iusto illum aliquam quo, 
                         consequatur nostrum quas cupiditate cum itaque ipsam modi asperiores doloremque in!Education is great. Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
@@ -71,5 +71,3 @@ export default class EducationPage extends Component {
         )
     }
 }
-
-
