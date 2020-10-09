@@ -65,7 +65,7 @@ export default class TechnologyPage extends Component {
                         consequatur nostrum quas cupiditate cum itaque ipsam modi asperiores doloremque in!</p>
                 </LightPageTextContainer>
                 </PageTextBlock>
-                <NewsLetterForm></NewsLetterForm>
+                <NewsLetterForm />
             </div>
         )
     }

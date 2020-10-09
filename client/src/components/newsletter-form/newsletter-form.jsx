@@ -23,7 +23,7 @@ export default class NewsLetterForm extends Component {
                 <EmailText styles="margin:0; height:80px;"><p>Join our email newsletter!</p></EmailText>
                 <FlexBox direction="row" horizontal="center" styles="margin: 10px 40px 10px; width:85vw; max-width:680px;">
                     <TextInput placeholder="Email Address" type="email" ref={this.emailInput}></TextInput>
-                    <SubmitButton to="/" onClick={this.subscribeEmail.bind(this)}>Submit</SubmitButton>
+                    <SubmitButton onClick={this.subscribeEmail.bind(this)}>Submit</SubmitButton>
                 </FlexBox>
                     <AlertMessage display={this.state.displayAlert} emailValid={this.state.emailValid}>{this.state.messageContent}</AlertMessage>
             </FlexBox>

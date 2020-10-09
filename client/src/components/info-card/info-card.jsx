@@ -30,7 +30,7 @@ export const InfoCard = styled.div`
     align-items:center;
     justify-content:center;
     border-radius: 3vw;
-    background-color:#0000006b;
+    background-color:#00000099;
     -webkit-box-shadow: 0px 10px 10px 0px #00000057;;
     -moz-box-shadow:    0px 10px 10px 0px #00000057;;
     box-shadow:         0px 10px 10px 0px #00000057;
@@ -51,7 +51,7 @@ export const InfoCard = styled.div`
         min-height:100%;
         height:120%;
         width:auto;
-        opacity:0.28;
+        opacity:0.54;
         transition: opacity 0.2s ease-out;
     }
 
