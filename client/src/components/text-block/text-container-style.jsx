@@ -10,13 +10,14 @@ export const TextContainer = styled.div`
     height: auto;
     background-color:#1d1d1d;
     text-align:center;
+    border-radius: 30px;
     
     & p{
         color: #ffffff;
-        padding: calc(2% + 5px) 4%;
+        padding: calc(2% + 3px);
         font-family: 'Raleway', sans-serif;
         font-size: 22px;
-        line-height:30px;
+        line-height:50px;
         text-align: ${props => props.side ? props.side : "center"}
     }
     
@@ -48,6 +49,7 @@ export const TextContainer = styled.div`
         & p{
             font-size:${props => props.mobileFontSize ? `min(max(${props.mobileFontSize}, 5vw), 25px)` : "min(5vw, 20px)"};
             padding: 5%;
+            line-height:40px;
         }
         ${props => {return props.styles}}; 
     }

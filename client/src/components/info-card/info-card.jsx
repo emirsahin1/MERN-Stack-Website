@@ -44,14 +44,14 @@ export const InfoCard = styled.div`
     }
 
     & img:hover{
-        opacity:.85;
+        opacity:.60;
     }
 
     & img{
         min-height:100%;
         height:120%;
         width:auto;
-        opacity:0.54;
+        opacity:0.35;
         transition: opacity 0.2s ease-out;
     }
 
@@ -72,7 +72,7 @@ export const InfoCard = styled.div`
         top:50%;
         color:white;
         font-weight:200;
-        font-size:min(3vw, 23px);
+        font-size:min(4.5vw, 24px);
         z-index:5;
         text-shadow: 0px 0px 30px #000000;
         pointer-events:none;

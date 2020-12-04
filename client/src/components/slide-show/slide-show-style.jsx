@@ -36,7 +36,7 @@ export const SlideshowContainer = styled.div`
     align-items: center;
     justify-content: center;
     width: 100%;
-    height: 500px;
+    height: 400px;
     overflow: hidden;
     background-color: rgb(29, 29, 29);
 

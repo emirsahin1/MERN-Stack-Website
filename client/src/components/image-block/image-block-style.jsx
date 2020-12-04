@@ -14,7 +14,7 @@ export const ImageContainer = styled.div`
     transform: translateX(500px);
     background-color:red;
     overflow: hidden;
-    margin: 50px 6%;
+    margin: 0px 6%;
     box-shadow: 30px 20px 50px rgba(0,0,0,0.4);
     transition: transform 0.85s ease, opacity 1.7s ease-out;
     opacity: 0;
@@ -50,7 +50,7 @@ export const Container = styled.div`
     width: 80%;
     align-items: center;
     flex-direction:${props => props.side === "left" ? "row" : "row-reverse"}; 
-    margin-top: 50px;
+    margin-top: 100px;
     margin-bottom: 50px;
     margin-right: auto;
     margin-left: auto;
