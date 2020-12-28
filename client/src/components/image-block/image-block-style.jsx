@@ -12,7 +12,7 @@ export const ImageContainer = styled.div`
     max-width: 500px;
     right:0px;
     transform: translateX(500px);
-    background-color:red;
+    background-color:#00000000;
     overflow: hidden;
     margin: 0px 6%;
     box-shadow: 30px 20px 50px rgba(0,0,0,0.4);

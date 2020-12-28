@@ -30,7 +30,7 @@ export const InfoCard = styled.div`
     align-items:center;
     justify-content:center;
     border-radius: 3vw;
-    background-color:#00000099;
+    background-color:#00000082;
     -webkit-box-shadow: 0px 10px 10px 0px #00000057;;
     -moz-box-shadow:    0px 10px 10px 0px #00000057;;
     box-shadow:         0px 10px 10px 0px #00000057;
@@ -44,14 +44,14 @@ export const InfoCard = styled.div`
     }
 
     & img:hover{
-        opacity:.60;
+        opacity:.70;
     }
 
     & img{
         min-height:100%;
         height:120%;
         width:auto;
-        opacity:0.35;
+        opacity:0.47;
         transition: opacity 0.2s ease-out;
     }
 

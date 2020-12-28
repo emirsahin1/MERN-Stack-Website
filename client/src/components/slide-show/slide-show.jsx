@@ -13,7 +13,7 @@ class SlideShow extends React.Component {
             imageIndex: 0,
             imageOpacity: 1
         }
-        this.images = this.importImages(require.context("../../images/slideshow-images", false, /.jpg/));
+        this.images = this.importImages(require.context("../../images/slideshow-images", false, /.jpg|.png/));
         this.numOfImages = this.images.length;
         this.switchDelay = 5000;
         this.switchImage.bind(this);

@@ -12,6 +12,7 @@ import TherapyPage from "./pages/therapy/therapy"
 import Footer from "./components/footer/footer"
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import ScrollToTop  from "./components/utility-components/scroll-to-top";
+import ScrollToTopF from "./components/scroll-to-top/scroll-to-top";
 import "./index.css";
 
 function App() {
@@ -31,6 +32,7 @@ function App() {
           <Route path="/Education" component={EducationPage}/>
           <Route exact path="/" component={Home} />
         </Switch>
+        <ScrollToTopF></ScrollToTopF>
         <Footer />
       </div>
     </Router>

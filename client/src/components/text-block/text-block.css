@@ -1,0 +1,30 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.text-container{
+    background-color: #1D1D1D;
+    margin: 60px auto;
+    width:90%;
+    height: auto;
+}
+
+.text-container p{
+
+    color: rgb(222, 209, 235);
+    padding: 5%;
+    font-family: 'Raleway', sans-serif;
+    font-size: 30px;
+}
+
+@media screen and (max-width: 768px){
+
+.text-container p{
+    font-size: calc(12px + 3vw);
+
+}
+
+
+}

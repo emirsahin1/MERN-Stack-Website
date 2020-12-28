@@ -53,6 +53,14 @@ export const TextContainer = styled.div`
         }
         ${props => {return props.styles}}; 
     }
+    @media ${device.tablet}{
+        & p{
+            font-size:${props => props.tabletFontSize ? `min(max(${props.tabletFontSize}, 5vw), 25px)` : "min(5vw, 18px)"};
+            padding: 5%;
+            line-height:40px;
+        }
+        ${props => {return props.styles}}; 
+    }
 
     /**If animated, the initial styles are set. */
     ${props => {
@@ -76,7 +84,7 @@ export const TextContainer = styled.div`
 /**Light version of the textContainer, used with a p tag and optional h header tag containing text inside.  */
 export const LightTextContainer = styled(TextContainer)`
 
-    background-color:#00000082;
+    background-color:#00000017;
     & p{
         color: #ffffff;
         text-shadow: 0 0 20px black;

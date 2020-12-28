@@ -1,0 +1,16 @@
+{
+  "name": "museum-of-light-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "node app.js",
+    "heroku-postbuild": "cd ../client && npm install && npm run build"
+  },
+  "author": "",
+  "license": "ISC"
+}

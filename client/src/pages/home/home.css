@@ -1,0 +1,16 @@
+.heading{
+    margin:10px 0px -10px;
+    text-align: center;
+    color:white;
+    font-size: 44px;
+    /* background-color: #00000061; */
+    width:230px;
+    border-radius: 10px;
+    padding:0px 20px;
+}
+
+.heading__line{
+    color:white;
+    border-top: 1px solid white;
+    width:100%;
+}

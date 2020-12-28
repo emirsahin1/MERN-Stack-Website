@@ -34,7 +34,7 @@ export default class ImageBlock extends Component {
                     <BlockImage src={this.props.image} alt="image not loaded"></BlockImage>
                 </ImageContainer>
                 <ScrollMarker ref={this.scrollMark}></ScrollMarker>
-                <TransparentTextContainer styles="margin-top:0px; margin-bottom:0px;" mobileFontSize={this.props.mobileFontSize} animated={true} beginAnimation={this.state.beginAnimation}>
+                <TransparentTextContainer styles="margin-top:0px; margin-bottom:25px;" animated={true} beginAnimation={this.state.beginAnimation}>
                     <p>
                         {this.props.children}
                     </p>
