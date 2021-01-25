@@ -9,9 +9,18 @@ export const SlideImage = styled.img`
     width: 100%;
     height: auto;
     position: absolute;
-    transition: all 0.250s linear;
-    -webkit-transition: all 0.250s linear;
-    opacity: ${props => props.opacity};
+    transform:scale(1.3);
+    transition: all 0.700s ease-in-out;
+    -webkit-transition: all 0.700s ease-in-out;
+    opacity: 0;
+
+    ${props => {if(props.slideactive){
+      return css`
+      transform:scale(1);
+      opacity: 1;`
+    }
+   }
+  }
 `
 export const SlideOverlay = styled.div`
   position:absolute;

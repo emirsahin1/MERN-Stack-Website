@@ -10,8 +10,7 @@ class SlideShow extends React.Component {
     constructor(props) {
         super(props);
         this.state={
-            imageIndex: 0,
-            imageOpacity: 1
+            imageIndex: 0
         }
         this.images = this.importImages(require.context("../../images/slideshow-images", false, /.jpg|.png/));
         this.numOfImages = this.images.length;
@@ -22,7 +21,9 @@ class SlideShow extends React.Component {
     render() {
         return (
             <SlideshowContainer>
-                <SlideImage opacity={this.state.imageOpacity} src={this.images[this.state.imageIndex]} />
+
+                {this.images.map((slide, index) =>
+                    <SlideImage slideactive={index === this.state.imageIndex ? true : false} src={slide}/>)}
                 {/* <SlideOverlay><span>Museum of Lighting</span></SlideOverlay> */}
                 <CircleContainer>
                 {Array(this.numOfImages).fill().map( (element, index) => 
@@ -40,8 +41,8 @@ class SlideShow extends React.Component {
                         </linearGradient>
                     </defs>
                 </SlideArrow>
-
                 <SlideArrow width="78" height="78" viewBox="0 0 78 78" fill="none" xmlns="http://www.w3.org/2000/svg">
+
                     <circle onClick={() => this.switchImage(1)} cx="39" cy="39" r="39" fill="black" />
                     <path d="M31.6782 7L27 11.6316L54.6437 39L27 66.3684L31.6782 71L32.5287 70.1579L64 39L31.6782 7Z" fill="url(#paint0_linear)" />
                     <defs>
@@ -52,29 +53,18 @@ class SlideShow extends React.Component {
                         </linearGradient>
                     </defs>
                 </SlideArrow>
+            
             </SlideshowContainer>
         )
     }
 
     componentDidMount(){
         //The interval for timing image switch. 
-        this.interval = setInterval(function(){this.switchImage(1)}.bind(this), this.switchDelay);
+        this.switchInterval = setInterval(function(){this.switchImage(1)}.bind(this), this.switchDelay);
     }
 
     componentWillUnmount(){
-        clearInterval(this.interval);
-    }
-
-    /**
-     * Imports images from a folder and returns an array containing the images. 
-     * @param {array} images : Object containing images.
-     */
-    importImages(images) {
-        let imageArray = [];
-        images.keys().forEach((element, i) => {
-            imageArray[i] = images(element);
-            });
-        return imageArray;
+        clearInterval(this.switchInterval);
     }
 
     /**
@@ -91,8 +81,9 @@ class SlideShow extends React.Component {
      * @param {int} direction : 1 for forward or 0 backward
      * @param {int} index : Optional direct index value. Pass in undefined when not used. 
      */
+    //TODO Change undefined to null
     switchImage(direction, index){
-        clearInterval(this.interval)
+        clearInterval(this.switchInterval);
         let newImageIndex;
         if(typeof index !== "undefined"){
             newImageIndex = index;
@@ -110,13 +101,21 @@ class SlideShow extends React.Component {
                 newImageIndex += this.numOfImages;
             }
         }
+        this.setState({imageIndex: newImageIndex});
 
-        this.setState({imageOpacity: 0}, function(){
+        this.switchInterval = setInterval(function(){this.switchImage(1, undefined)}.bind(this), this.switchDelay);  
+    }
 
-        setTimeout((function(){this.setState(prevState => ({imageIndex: newImageIndex, imageOpacity: 1}))}.bind(this)), 250);
-    }.bind(this));
-
-        this.interval = setInterval(function(){this.switchImage(1, undefined)}.bind(this), 5000);
+    /**
+     * Imports images from a folder and returns an array containing the images. 
+     * @param {array} images : Object containing images.
+     */
+    importImages(images) {
+        let imageArray = [];
+        images.keys().forEach((element, i) => {
+            imageArray[i] = images(element);
+            });
+        return imageArray;
     }
 }
 export default SlideShow; 

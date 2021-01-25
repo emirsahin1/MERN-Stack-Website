@@ -84,7 +84,7 @@ export const TextContainer = styled.div`
 /**Light version of the textContainer, used with a p tag and optional h header tag containing text inside.  */
 export const LightTextContainer = styled(TextContainer)`
 
-    background-color:#00000017;
+    background-color:#00000024;
     & p{
         color: #ffffff;
         text-shadow: 0 0 20px black;

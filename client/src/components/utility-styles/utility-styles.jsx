@@ -5,7 +5,7 @@ import {device} from "../../device-sizes"
 export const ScrollMarker = styled.div`
     width: 10px;
     height: 10px;
-    transform: translatey(-25vh);
+    transform: translatey(-20vh);
     /* background-color: red; */
 
     @media ${device.mobile}{
