@@ -8,6 +8,7 @@ import { Divider, TransparentDivider, FlexBox } from "../../components/utility-s
 import { TextInput } from "../../components/input/input-style"
 import { InfoCard, InforCardContainer, CardHeader } from "../../components/info-card/info-card"
 import { Link } from "react-router-dom"
+import ScrollToTopF from "../../components/scroll-to-top/scroll-to-top";
 // import ScrollToTop  from "../../components/utility-components/scroll-to-top";
 import scrollToTopF from "../../utility/utility_functions";
 import { useEffect } from "react";
@@ -116,6 +117,8 @@ export default class Home extends React.Component {
                 lighting adds value to the intimate environment through the example of an installed 
                 lighting design project of an historic Approach of Troy, NY.
                 </ImageBlock>
+
+                <ScrollToTopF></ScrollToTopF>
 
                 {/* <RectangleButton onClick={() => scrollToTopF()}><span>Scroll Up</span></RectangleButton> */}
 
