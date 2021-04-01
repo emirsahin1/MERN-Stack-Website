@@ -22,5 +22,5 @@
   "display": "standalone",
   "theme_color": "#000000",
   "background_color": "#ffffff",
-  "content_security_policy": "default-src 'self' https://www.google-analytics.com 'unsafe-inline'"
+  "content_security_policy": "'script-src' 'unsafe-inline' https://tag.manager.google.com/ https://www.googletagmanager.com/"
 }
