@@ -21,6 +21,5 @@
   "start_url": ".",
   "display": "standalone",
   "theme_color": "#000000",
-  "background_color": "#ffffff",
-  "content_security_policy": "'script-src' 'unsafe-inline' https://tag.manager.google.com/ https://www.googletagmanager.com/"
+  "background_color": "#ffffff"
 }
