@@ -25,6 +25,7 @@ export default class Home extends React.Component {
     constructor(props) {
         super(props)
         this.emailInput = React.createRef();
+        this.educCard = React.createRef();
         this.slideImages = this.importImages(require.context("../../images/slideshow-images", false, /.jpg|.png/));
         this.cardImages = this.importImages(require.context("../../images/cards", false, /.jpg|.png/,));
 
@@ -42,41 +43,51 @@ export default class Home extends React.Component {
                 <hr className="heading__line"></hr>
                 </FlexBox>
                 <InforCardContainer>
-                    <Link to="/Education">
-                        <InfoCard>
+                    {/* <Link to="/Education"> */}
+                    <a>
+                        <InfoCard onClick={this.jumpToElement}>
                             <h3>Education</h3>
                             <p>learn and experience the marvels of lighting</p>
                             <img src={this.cardImages[1]}></img>
                         </InfoCard>
-                    </Link>
-                    <Link to="/Design">
-                    <InfoCard>
+                    {/* </Link> */}
+                    </a>
+                    {/* <Link to="/Design"> */}
+                    <a>
+                    <InfoCard onClick={this.jumpToElement}>
                         <h3>Design</h3>
                         <p>when light meets the eye</p>
                         <img src={this.cardImages[0]}></img>
                     </InfoCard>
-                    </Link>
-                    <Link to="/Therapy">
-                    <InfoCard>
+                    </a>
+                    {/* </Link> */}
+                    {/* <Link to="/Therapy"> */}
+                    <a>
+                    <InfoCard onClick={this.jumpToElement}>
                         <h3>Therapy</h3>
                         <p>light is much more than vision</p>
                         <img src={this.cardImages[4]}></img>
                     </InfoCard>
-                    </Link>
-                    <Link to="/Art">
-                    <InfoCard styles="@media screen and (max-width: 1320px) and (min-width: 1016px){flex-grow:0.68; max-width:500px;}">
+                    </a>
+                    {/* </Link> */}
+                    {/* <Link to="/Art"> */}
+                    <a>
+                    <InfoCard styles="@media screen and (max-width: 1320px) and (min-width: 1016px){flex-grow:0.68; max-width:500px;}" onClick={this.jumpToElement}>
                         <h3>Art</h3>
                         <p>to see art is to see light</p>
                         <img src={this.cardImages[2]}></img>
                     </InfoCard>
-                    </Link>
-                    <Link to="/Technology">
-                    <InfoCard styles="@media screen and (max-width: 1320px){flex-grow:0.68; max-width:500px;}">
+                    </a>
+                    {/* </Link> */}
+                    {/* <Link to="/Technology"> */}
+                    <a>
+                    <InfoCard styles="@media screen and (max-width: 1320px){flex-grow:0.68; max-width:500px;}" onClick={this.jumpToElement}>
                         <h3>Technology</h3>
                         <p>the journey of light medium and form</p>
                         <img src={this.cardImages[3]}></img>
                     </InfoCard>
-                    </Link>
+                    </a>
+                    {/* </Link> */}
                 </InforCardContainer>
 
                 <LightTextContainer mobileFontSize="14px">
@@ -100,7 +111,8 @@ export default class Home extends React.Component {
 
                 <NewsLetterForm />
 
-                <ImageBlock side="right" image={require("../../images/general-images/ames3.jpg")}>
+                <ImageBlock side="right" image={require("../../images/general-images/ames3.jpg")} ref={this.educCard}>
+                {/* <div ref={this.educCard}></div> */}
                 What you perceive to be true and what is true aren’t always the same. 
                 Learn and experience the phenomenon behind the Ames Room with this amazing AR application. 
                 </ImageBlock>
@@ -155,4 +167,10 @@ export default class Home extends React.Component {
         });
         return imageArray;
     }
+
+    jumpToElement = (element) =>{
+        console.log(this.educCard);
+        this.educCard.current.scrollMark.current.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+
 }
