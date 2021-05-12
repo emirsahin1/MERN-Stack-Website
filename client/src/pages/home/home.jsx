@@ -91,7 +91,7 @@ export default class Home extends React.Component {
                 </InforCardContainer>
 
                 <LightTextContainer mobileFontSize="14px">
-                    <p>The <span>Museum of Lighting</span> is an open access all-in-one platform devoted to Virtual/Augmented/Mixed Reality applications. 
+                    <p>The <span>Museum of Lighting</span> is an open access all-in-one platform devoted to lighting related Virtual/Augmented/Mixed Reality applications. 
                         We aim to gather lighting enthusiasts, educators, designers, researchers, and 
                         artists in one place to tell their stories about light and lighting via immersive technologies. 
                     </p>
