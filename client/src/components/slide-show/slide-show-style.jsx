@@ -17,7 +17,7 @@ export const SlideImage = styled.img`
     ${props => {if(props.slideactive){
       return css`
       transform:scale(1);
-      opacity: 1;`
+      opacity: 0.7;`
     }
    }
   }
