@@ -33,8 +33,8 @@ class SlideShow extends React.Component {
                 </div> */}
 
                 <div id="clock-container">
-                    <div className="App-title">Countdown to Launch</div>
-                    <div className="clock">
+                    <div className="App-title">Coming Soon</div>
+                    {/* <div className="clock">
                         {this.leadingZero(this.state.days)} {this.state.days == 1 ? 'day' : 'days'} &nbsp;
                     </div>
                     <div className="clock">
@@ -45,7 +45,7 @@ class SlideShow extends React.Component {
                     </div>
                     <div className="clock">
                         {this.leadingZero(this.state.seconds)} {this.state.seconds == 1 ? 'second' : 'seconds'}&nbsp;
-                    </div>
+                    </div> */}
                 </div>
 
                 {this.images.map((slide, index) =>
