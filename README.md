@@ -1,6 +1,6 @@
-# React-Example-Site
-An example website created with React and nodeJS for an AR/VR lighting project. 
-Additonaly uses the styled components library on top of regular css.
+# Example-WebSite
+An example website created with React and nodeJS (MERN stack) for a personal AR/VR lighting project. 
+Additonaly uses the styled components library for React on top of regular css.
 
 ## Link
 
